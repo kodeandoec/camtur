@@ -9,6 +9,8 @@ import {
 } from 'react-native'
 
 import Feather from 'react-native-vector-icons/Feather'
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
+import getDirections from 'react-native-google-maps-directions'
 import Swiper from 'react-native-swiper';
 
 import RenderHtml from 'react-native-render-html';
@@ -18,20 +20,33 @@ import colors from '../../utils/colors';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 const { width } = Dimensions.get('screen');
-
-import moment from 'moment';
-import 'moment/locale/es'
  
-const NewInfo = ({ route, navigation }) => {
+const TrekkingInfo = ({ route, navigation }) => {
 
     const { item } = route.params;
 
     const { top } = useSafeAreaInsets();
 
-    const changeDate = (d) => {
-        const myDate = moment(d).format('LL');
-        return myDate
-    } 
+    const handleGetDirections = () => {
+        const data = {
+            destination: {
+                latitude: Number(item.latitude),
+                longitude: Number(item.longitude),
+            },
+            params: [
+                {
+                    key: "travelmode",
+                    value: "driving"        // may be "walking", "bicycling" or "transit" as well
+                },
+                {
+                    key: "dir_action",
+                    value: "navigate"       // this instantly initializes navigation using the given travel mode
+                }
+            ],
+        }
+
+        getDirections(data)
+    }
 
     return (
         <ScrollView 
@@ -86,20 +101,68 @@ const NewInfo = ({ route, navigation }) => {
                         resizeMethod='resize'
                     />
                 )}
+                { item.photo4 && (
+                    <Image
+                        source={{ uri: item.photo4 }}
+                        style={styles.image}
+                        resizeMode='cover'
+                        resizeMethod='resize'
+                    />
+                )}
+                { item.photo5 && (
+                    <Image
+                        source={{ uri: item.photo5 }}
+                        style={styles.image}
+                        resizeMode='cover'
+                        resizeMethod='resize'
+                    />
+                )}
             </Swiper>
 
             <View style={styles.content}>
                 <View style={styles.contenData}>
-                    <Text style={styles.name}>{item.title_es}</Text>
-                    <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 15}}>
-                        <Feather name="calendar" size={14} color={colors.BLACK} />
-                        <Text style={styles.txtDate}>{changeDate(item.date)}</Text>
-                    </View>
+                    <Text style={styles.name}>{item.name}</Text>
                     <RenderHtml
                         contentWidth={width}
                         source={{html: item.description_es}}
+                        style={styles.txtDesciption}
                         tagsStyles={tagsStyles}
                     />
+                    <MapView
+                        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+                        style={styles.map}
+                        mapType="satellite"
+                        region={{
+                            latitude: Number(item.latitude),
+                            longitude: Number(item.longitude),
+                            latitudeDelta: 0.015,
+                            longitudeDelta: 0.0121,
+                        }}
+                    >
+                        <MapView.Marker
+                            coordinate={{
+                                latitude: Number(item.latitude),
+                                longitude: Number(item.longitude),
+                            }}
+                        >
+                            <View style={[styles.markerWrap]}>
+                                <Image
+                                source={require('../../../assets/img/map-pin.png')}
+                                style={styles.marker}
+                                resizeMode="cover"
+                                />
+                            </View>
+                        </MapView.Marker>
+                    </MapView>
+
+                    <TouchableHighlight
+                        onPress={ () => handleGetDirections() }
+                        underlayColor={colors.BLACK}
+                        activeOpacity={0.8}
+                        style={styles.btnGetDirections}
+                    >
+                        <Text style={styles.btnText}>Llévame a este lugar</Text>
+                    </TouchableHighlight>
                 </View>
             </View>
             <View style={{ height: 20 }} />
@@ -129,4 +192,4 @@ const tagsStyles = {
     },
 }
  
-export default NewInfo;
+export default TrekkingInfo;

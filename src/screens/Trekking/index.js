@@ -8,16 +8,16 @@ import {
     Image
 } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import useAtractions from '../../hooks/useAtractions';
+import useTrekking from '../../hooks/useTrekking';
 
 import styles from './index.styles'
 import colors from '../../utils/colors';
  
-const Attractions = ( { navigation }) => {
+const Trekking = ( { navigation }) => {
 
     const { top } = useSafeAreaInsets();
 
-    const { state, loading } = useAtractions();
+    const { state, loading } = useTrekking();
 
 
     return (
@@ -36,7 +36,7 @@ const Attractions = ( { navigation }) => {
                         showsVerticalScrollIndicator={false}
                         ListHeaderComponent={ () => (
                             <View style={{marginTop: 30}}>
-                                <Text style={styles.welcomeUp}>Atractivos turísticos en</Text>
+                                <Text style={styles.welcomeUp}>Senderismo en</Text>
                                 <Text style={styles.welcomeDown}>Baños Ecuador</Text>
                             </View>
                         )}
@@ -44,7 +44,7 @@ const Attractions = ( { navigation }) => {
                             <TouchableHighlight 
                                 style={styles.viewAttraction}
                                 underlayColor={colors.BLACK}
-                                onPress={() => navigation.navigate('AtractionInfo', { item })}
+                                onPress={() => navigation.navigate('TrekkingInfo', { item })}
                                 activeOpacity={0.8}
                             >
                                 <>
@@ -74,4 +74,4 @@ const Attractions = ( { navigation }) => {
     )
 }
  
-export default Attractions;
+export default Trekking;

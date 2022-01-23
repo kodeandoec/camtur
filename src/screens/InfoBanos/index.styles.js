@@ -24,7 +24,6 @@ export default StyleSheet.create({
         paddingHorizontal: '2%',
         paddingVertical: 20,
         borderRadius: 20,
-        top: -60,
     },
     contenData:{
         marginHorizontal: '1%',
@@ -35,10 +34,15 @@ export default StyleSheet.create({
     },
     name:{
         fontSize: 32,
-        lineHeight: 32,
         fontFamily: 'Lato-Bold',
         color: colors.BLACK,
         marginBottom: 10,
+    },
+    nameUp:{
+        fontSize: 22,
+        fontFamily: 'Lato-Regular',
+        color: colors.BLACK,
+        marginTop: 20
     },
     description:{
         fontSize: 16,
@@ -83,11 +87,5 @@ export default StyleSheet.create({
       lineHeight: 19, 
       textAlign:'justify',
       marginTop: 20
-    },
-    txtDate:{
-        fontSize: 16,
-        fontFamily: 'Lato-Regular',
-        color: colors.BLACK,
-        marginLeft: 5,
     },
 });

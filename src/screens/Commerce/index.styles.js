@@ -7,7 +7,7 @@ const { width, height } = Dimensions.get('screen');
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.WHITE,
+        backgroundColor: colors.BG,
     },
     wrapper: {
         height: height / 2,
@@ -21,11 +21,16 @@ export default StyleSheet.create({
         height: height / 2,
     },
     content:{
+        paddingVertical: 20,
+        backgroundColor: colors.BG,
+        borderRadius: 20,
+    },
+    contenData:{
+        marginHorizontal: '3%',
         paddingHorizontal: '5%',
         paddingVertical: 20,
         backgroundColor: colors.WHITE,
         borderRadius: 20,
-        top: -20,
     },
     name:{
         fontSize: 32,
@@ -103,7 +108,6 @@ export default StyleSheet.create({
         fontSize: 19,
         fontFamily: 'Lato-Bold',
         color: colors.BLACK,
-        marginTop: 20,
         marginBottom: 10,
         textAlign: 'justify',
         textTransform: 'uppercase',
