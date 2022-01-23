@@ -7,8 +7,16 @@ const { width, height } = Dimensions.get('screen');
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.WHITE,
+        backgroundColor: '#EBF1EB',
+        paddingHorizontal: '2%',
+    },
+    contenData:{
+        marginHorizontal: '1%',
         paddingHorizontal: '5%',
+        paddingVertical: 20,
+        backgroundColor: colors.WHITE,
+        borderRadius: 20,
+        marginBottom: 20,
     },
     welcomeUp:{
         fontSize: 20,
@@ -122,4 +130,37 @@ export default StyleSheet.create({
         fontFamily: 'Lato-Bold',
         alignSelf: 'center'
     },
+    btnMenu:{
+        backgroundColor: colors.WHITE,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        marginBottom: 20,
+        borderRadius: 15,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 3,
+        },
+        shadowOpacity: 0.41,
+        shadowRadius: 9.11,
+        elevation: 8,
+        paddingVertical: 15,
+        paddingHorizontal: 10,
+    },
+    txtInfos:{
+        color: colors.BLACK,
+        fontSize: 18,
+        lineHeight: 18,
+        fontFamily: 'Lato-Regular',
+        flex: 1,
+        marginLeft: 10,
+    },
+    bgIcon:{
+        backgroundColor: colors.GREEN,
+        padding: 10,
+        borderRadius: 50,
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
 });
