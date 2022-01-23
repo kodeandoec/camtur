@@ -43,36 +43,47 @@ const Map = ({ navigation }) => {
                 <Text style={styles.nameUp}>Mapa Turístico de</Text>
                 <Text style={styles.name}>Baños Ecuador</Text>
 
-                <View>
-                    <Image
-                        source={ require('../../../assets/img/mapa-banos-1.png')}
-                        style={{
-                            width: '100%',
-                            height: 300,
-                            borderRadius: 20,
-                        }}
-                    />
-                    <View style={styles.zoomBtn}>
-                        <Feather name="zoom-in" size={30} color={colors.GREEN} />
-                        <Text style={styles.txtZoom}>Click para hacer Zoom</Text>
-                    </View>
-                </View>
+                <TouchableHighlight
+                    underlayColor={colors.BG}
+                    activeOpacity={0.8}
+                    onPress={ () => navigation.navigate('ViewMap') }
+                >
+                    <>
+                        <Image
+                            source={ require('../../../assets/img/mapa-banos-1.png')}
+                            style={{
+                                width: '100%',
+                                height: 300,
+                                borderRadius: 20,
+                            }}
+                        />
+                        <View style={styles.zoomBtn}>
+                            <Feather name="zoom-in" size={30} color={colors.GREEN} />
+                            <Text style={styles.txtZoom}>Click para hacer Zoom</Text>
+                        </View>
+                    </>
+                </TouchableHighlight>
 
-                <View>
-                    <Image
-                        source={ require('../../../assets/img/mapa-banos-2.png')}
-                        style={{
-                            width: '100%',
-                            height: 300,
-                            borderRadius: 20,
-                            marginTop: 20,
-                        }}
-                    />
-                    <View style={styles.zoomBtn}>
-                        <Feather name="zoom-in" size={30} color={colors.GREEN} />
-                        <Text style={styles.txtZoom}>Click para hacer Zoom</Text>
-                    </View>
-                </View>
+                <TouchableHighlight
+                    underlayColor={colors.BG}
+                    activeOpacity={0.8}
+                    onPress={ () => navigation.navigate('ViewMapp') }
+                >
+                    <>
+                        <Image
+                            source={ require('../../../assets/img/mapa-banos-2.png')}
+                            style={{
+                                width: '100%',
+                                height: 300,
+                                borderRadius: 20,
+                            }}
+                        />
+                        <View style={styles.zoomBtn}>
+                            <Feather name="zoom-in" size={30} color={colors.GREEN} />
+                            <Text style={styles.txtZoom}>Click para hacer Zoom</Text>
+                        </View>
+                    </>
+                </TouchableHighlight>
             </View>
         </ScrollView>
     )

@@ -18,7 +18,7 @@ import { PinchGestureHandler, State } from 'react-native-gesture-handler'
 
 const { width, height } = Dimensions.get('screen');
  
-const ViewMap = ({ navigation }) => {
+const ViewMapp = ({ navigation }) => {
 
     const { top } = useSafeAreaInsets();
 
@@ -71,7 +71,7 @@ const ViewMap = ({ navigation }) => {
                     onGestureEvent={onPinchEvent}
                 >
                     <Animated.Image
-                        source={require('../../../assets/img/mapa-banos-1.png')}
+                        source={require('../../../assets/img/mapa-banos-2.png')}
                         style={{
                             width: 1200,
                             height: height,
@@ -85,4 +85,4 @@ const ViewMap = ({ navigation }) => {
     )
 }
  
-export default ViewMap;
+export default ViewMapp;

@@ -8,6 +8,7 @@ import NewInfo from '../screens/NewInfo';
 import InfoBanos from '../screens/InfoBanos';
 import Map from '../screens/Map';
 import ViewMap from '../screens/ViewMap';
+import ViewMapp from '../screens/ViewMapp';
 
 const InfoNavigator = ( ) => {
 
@@ -66,6 +67,14 @@ const InfoNavigator = ( ) => {
       <Stack.Screen
         name="ViewMap"
         component={ViewMap}
+        options={{
+          headerShown: false,
+          tabBarStyle:{ display: 'none' }
+        }}
+      />
+      <Stack.Screen
+        name="ViewMapp"
+        component={ViewMapp}
         options={{
           headerShown: false,
           tabBarStyle:{ display: 'none' }
