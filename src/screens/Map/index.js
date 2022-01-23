@@ -12,8 +12,6 @@ import Feather from 'react-native-vector-icons/Feather'
 import styles from './index.styles'
 import colors from '../../utils/colors';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-
-import ReactNativeZoomableView from '@openspacelabs/react-native-zoomable-view/src/ReactNativeZoomableView';
  
 const Map = ({ navigation }) => {
 
@@ -36,25 +34,51 @@ const Map = ({ navigation }) => {
                     alignItems: 'center',
                     justifyContent: 'center',
                  }}
-                 onPress={ () => navigation.goBack() }
+                 onPress={ () => navigation.navigate("ViewMap") }
             >
                 <Feather name="arrow-left" size={30} color={colors.GREEN} />
             </TouchableHighlight>
 
-            <ReactNativeZoomableView
-                maxZoom={1.5}
-                minZoom={0.5}
-                zoomStep={0.5}
-                initialZoom={1}
-                bindToBorders={true}
-                onZoomAfter={this.logOutZoomState}
-                style={{
-                    padding: 10,
-                    backgroundColor: 'red',
-                }}
+            <View style={styles.content}>
+                <Text style={styles.nameUp}>Mapa Turístico de</Text>
+                <Text style={styles.name}>Baños Ecuador</Text>
+                
+                <Image
+                    source={ require('../../../assets/img/mapa-banos-1.png')}
+                    style={{
+                        width: '100%',
+                        height: 300,
+                        borderRadius: 20,
+                    }}
+                />
+                <TouchableHighlight
+                    underlayColor={colors.GREEN}
+                    onpress={ () => console.log('hello')}
                 >
-                <Text>This is the content</Text>
-            </ReactNativeZoomableView>
+                    <View style={styles.zoomBtn}>
+                        <Feather name="zoom-in" size={30} color={colors.GREEN} />
+                        <Text style={styles.txtZoom}>Click para hacer Zoom</Text>
+                    </View>
+                </TouchableHighlight>
+                
+
+                <View>
+                    <Image
+                        source={ require('../../../assets/img/mapa-banos-2.png')}
+                        style={{
+                            width: '100%',
+                            height: 300,
+                            borderRadius: 20,
+                            marginTop: 20,
+                        }}
+                    />
+                    <View style={styles.zoomBtn}>
+                        <Feather name="zoom-in" size={30} color={colors.GREEN} />
+                        <Text style={styles.txtZoom}>Click para hacer Zoom</Text>
+                    </View>
+                </View>
+            </View>
+            
         </ScrollView>
     )
 }

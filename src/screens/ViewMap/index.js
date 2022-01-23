@@ -12,6 +12,8 @@ import Feather from 'react-native-vector-icons/Feather'
 import styles from './index.styles'
 import colors from '../../utils/colors';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
  
 const ViewMap = ({ navigation }) => {
 
@@ -39,41 +41,17 @@ const ViewMap = ({ navigation }) => {
                 <Feather name="arrow-left" size={30} color={colors.GREEN} />
             </TouchableHighlight>
 
-            <View style={styles.content}>
-                <Text style={styles.nameUp}>Mapa Turístico de</Text>
-                <Text style={styles.name}>Baños Ecuador</Text>
-
-                <View>
+            <TransformWrapper>
+                <TransformComponent>
                     <Image
-                        source={ require('../../../assets/img/mapa-banos-1.png')}
+                        src="image.jpg"
                         style={{
                             width: '100%',
                             height: 300,
-                            borderRadius: 20,
                         }}
                     />
-                    <View style={styles.zoomBtn}>
-                        <Feather name="zoom-in" size={30} color={colors.GREEN} />
-                        <Text style={styles.txtZoom}>Click para hacer Zoom</Text>
-                    </View>
-                </View>
-
-                <View>
-                    <Image
-                        source={ require('../../../assets/img/mapa-banos-2.png')}
-                        style={{
-                            width: '100%',
-                            height: 300,
-                            borderRadius: 20,
-                            marginTop: 20,
-                        }}
-                    />
-                    <View style={styles.zoomBtn}>
-                        <Feather name="zoom-in" size={30} color={colors.GREEN} />
-                        <Text style={styles.txtZoom}>Click para hacer Zoom</Text>
-                    </View>
-                </View>
-            </View>
+                </TransformComponent>
+            </TransformWrapper>
         </ScrollView>
     )
 }
