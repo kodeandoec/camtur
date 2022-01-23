@@ -89,20 +89,18 @@ const NewInfo = ({ route, navigation }) => {
             </Swiper>
 
             <View style={styles.content}>
-                <View style={styles.contenData}>
-                    <Text style={styles.name}>{item.title_es}</Text>
-                    <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 15}}>
-                        <Feather name="calendar" size={14} color={colors.BLACK} />
-                        <Text style={styles.txtDate}>{changeDate(item.date)}</Text>
-                    </View>
-                    <RenderHtml
-                        contentWidth={width}
-                        source={{html: item.description_es}}
-                        tagsStyles={tagsStyles}
-                    />
+                <Text style={styles.name}>{item.title_es}</Text>
+                <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 15}}>
+                    <Feather name="calendar" size={14} color={colors.BLACK} />
+                    <Text style={styles.txtDate}>{changeDate(item.date)}</Text>
                 </View>
+                <RenderHtml
+                    contentWidth={width}
+                    source={{html: item.description_es}}
+                    tagsStyles={tagsStyles}
+                />
             </View>
-            <View style={{ height: 20 }} />
+            <View style={{ height: 50 }} />
         </ScrollView>
     )
 }

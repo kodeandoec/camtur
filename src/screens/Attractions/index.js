@@ -37,7 +37,7 @@ const Attractions = ( { navigation }) => {
                         ListHeaderComponent={ () => (
                             <View style={{marginTop: 30}}>
                                 <Text style={styles.welcomeUp}>Atractivos turísticos en</Text>
-                                <Text style={styles.welcomeDown}>Baños Ecuador</Text>
+                                <Text style={styles.welcomeDown}>Baños de Agua Santa</Text>
                             </View>
                         )}
                         renderItem={({ item }) => (

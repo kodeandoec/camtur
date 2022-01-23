@@ -120,52 +120,50 @@ const AtractionInfo = ({ route, navigation }) => {
             </Swiper>
 
             <View style={styles.content}>
-                <View style={styles.contenData}>
-                    <Text style={styles.name}>{item.name}</Text>
-                    <RenderHtml
-                        contentWidth={width}
-                        source={{html: item.description_es}}
-                        style={styles.txtDesciption}
-                        tagsStyles={tagsStyles}
-                    />
-                    <MapView
-                        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
-                        style={styles.map}
-                        mapType="satellite"
-                        region={{
+                <Text style={styles.name}>{item.name}</Text>
+                <RenderHtml
+                    contentWidth={width}
+                    source={{html: item.description_es}}
+                    style={styles.txtDesciption}
+                    tagsStyles={tagsStyles}
+                />
+                <MapView
+                    provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+                    style={styles.map}
+                    mapType="satellite"
+                    region={{
+                        latitude: Number(item.latitude),
+                        longitude: Number(item.longitude),
+                        latitudeDelta: 0.015,
+                        longitudeDelta: 0.0121,
+                    }}
+                >
+                    <MapView.Marker
+                        coordinate={{
                             latitude: Number(item.latitude),
                             longitude: Number(item.longitude),
-                            latitudeDelta: 0.015,
-                            longitudeDelta: 0.0121,
                         }}
                     >
-                        <MapView.Marker
-                            coordinate={{
-                                latitude: Number(item.latitude),
-                                longitude: Number(item.longitude),
-                            }}
-                        >
-                            <View style={[styles.markerWrap]}>
-                                <Image
-                                source={require('../../../assets/img/map-pin.png')}
-                                style={styles.marker}
-                                resizeMode="cover"
-                                />
-                            </View>
-                        </MapView.Marker>
-                    </MapView>
+                        <View style={[styles.markerWrap]}>
+                            <Image
+                            source={require('../../../assets/img/map-pin.png')}
+                            style={styles.marker}
+                            resizeMode="cover"
+                            />
+                        </View>
+                    </MapView.Marker>
+                </MapView>
 
-                    <TouchableHighlight
-                        onPress={ () => handleGetDirections() }
-                        underlayColor={colors.BLACK}
-                        activeOpacity={0.8}
-                        style={styles.btnGetDirections}
-                    >
-                        <Text style={styles.btnText}>Llévame a este lugar</Text>
-                    </TouchableHighlight>
-                </View>
+                <TouchableHighlight
+                    onPress={ () => handleGetDirections() }
+                    underlayColor={colors.BLACK}
+                    activeOpacity={0.8}
+                    style={styles.btnGetDirections}
+                >
+                    <Text style={styles.btnText}>Llévame a este lugar</Text>
+                </TouchableHighlight>
             </View>
-            <View style={{ height: 20 }} />
+            <View style={{ height: 50 }} />
         </ScrollView>
     )
 }

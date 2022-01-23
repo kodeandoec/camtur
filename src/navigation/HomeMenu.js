@@ -7,8 +7,8 @@ import { StyleSheet, Platform } from 'react-native';
 import AttractionsNavigator from './AttractionsNavigator';
 import Home from '../screens/Home';
 import CategoryNavigator from './CategoryNavigator';
-import TrekkingNavigator from './TrekkingNavigator';
-import InfoNavigator from './InfoNavigator';
+import Information from '../screens/Information';
+import NewsNavigator from './NewsNavigator';
 
 import Feather from 'react-native-vector-icons/Feather';
 
@@ -54,20 +54,20 @@ const HomeMenu = () => {
                 }} 
             />
             <Tab.Screen 
-                name="TrekkingNavigator" 
-                component={TrekkingNavigator}
+                name="CategoryNavigator" 
+                component={CategoryNavigator} 
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <Feather name="navigation" color={color} size={size} />
+                        <Feather name="layers" color={color} size={size} />
                     ),
-                    tabBarLabel: 'Senderismo',
+                    tabBarLabel: 'Categorías',
                     tabBarActiveTintColor: colors.GREEN,
                     tabBarLabelStyle: {
                         fontSize: 12,
-                        fontFamily: 'Lato-Bold',
+                        fontFamily: 'Lato-Regular',
                     },
                     headerShown: false,
-                }} 
+                }}
             />
             <Tab.Screen 
                 name="Home" 
@@ -86,24 +86,24 @@ const HomeMenu = () => {
                 }}
             />
             <Tab.Screen 
-                name="CategoryNavigator" 
-                component={CategoryNavigator} 
+                name="NewsNavigator" 
+                component={NewsNavigator}
                 options={{
                     tabBarIcon: ({ color, size }) => (
-                        <Feather name="layers" color={color} size={size} />
+                        <Feather name="archive" color={color} size={size} />
                     ),
-                    tabBarLabel: 'Categorías',
+                    tabBarLabel: 'Noticias',
                     tabBarActiveTintColor: colors.GREEN,
                     tabBarLabelStyle: {
                         fontSize: 12,
-                        fontFamily: 'Lato-Regular',
+                        fontFamily: 'Lato-Bold',
                     },
                     headerShown: false,
-                }}
+                }} 
             />
             <Tab.Screen 
-                name="InfoNavigator" 
-                component={InfoNavigator} 
+                name="Information" 
+                component={Information} 
                 options={{
                     tabBarIcon: ({ color, size }) => (
                         <Feather name="info" color={color} size={size} />

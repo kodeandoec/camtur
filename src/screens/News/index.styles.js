@@ -12,7 +12,6 @@ export default StyleSheet.create({
         lineHeight: 30,
         fontFamily: 'Lato-Regular',
         color: colors.BLACK,
-        marginTop: 60
     },
     welcomeDown:{
         fontSize: 40,
