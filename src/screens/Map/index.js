@@ -5,6 +5,7 @@ import {
     TouchableHighlight,
     Image,
     ScrollView,
+    StatusBar
 } from 'react-native'
 
 import Feather from 'react-native-vector-icons/Feather'
@@ -22,6 +23,10 @@ const Map = ({ navigation }) => {
             style={styles.container}
             showsVerticalScrollIndicator={false}
         >
+            <StatusBar
+                backgroundColor={colors.GRAY}
+                barStyle="light-content"
+            />
             <TouchableHighlight
                 style={{ 
                     position: 'absolute', 
@@ -68,13 +73,14 @@ const Map = ({ navigation }) => {
                     underlayColor={colors.BG}
                     activeOpacity={0.8}
                     onPress={ () => navigation.navigate('ViewMapp') }
+                    style={{ marginTop: 30 }}
                 >
                     <>
                         <Image
                             source={ require('../../../assets/img/mapa-banos-2.png')}
                             style={{
                                 width: '100%',
-                                height: 300,
+                                height: 400,
                                 borderRadius: 20,
                             }}
                         />
@@ -84,6 +90,7 @@ const Map = ({ navigation }) => {
                         </View>
                     </>
                 </TouchableHighlight>
+
             </View>
         </ScrollView>
     )

@@ -1,4 +1,5 @@
-package com.camtur;
+// package com.camtur;
+package online.camtur;
 
 import com.facebook.react.ReactActivity;
 

@@ -8,10 +8,12 @@ export default StyleSheet.create({
         backgroundColor: colors.WHITE,
     },
     content:{
+        flex: 1,
         paddingHorizontal: '4%',
         paddingVertical: 20,
         borderRadius: 20,
         top: 60,
+        paddingBottom: 400
     },
     name:{
         fontSize: 32,
