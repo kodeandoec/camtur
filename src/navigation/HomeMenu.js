@@ -1,138 +1,146 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { StyleSheet, Platform } from 'react-native';
+import HomeTabMenu from './HomeTabMenu';
 
-import AttractionsNavigator from './AttractionsNavigator';
-import Home from '../screens/Home';
-import CategoryNavigator from './CategoryNavigator';
-import TrekkingNavigator from './TrekkingNavigator';
-import InfoNavigator from './InfoNavigator';
 
-import Feather from 'react-native-vector-icons/Feather';
+import Attractions from '../screens/Attractions';
+import AtractionInfo from '../screens/AtractionInfo';
+import Categories from '../screens/Categories';
+import CategoryList from '../screens/CategoryList';
+import Commerce from '../screens/Commerce';
+import Information from '../screens/Information';
+import News from '../screens/News';
+import NewInfo from '../screens/NewInfo';
+import InfoBanos from '../screens/InfoBanos';
+import Map from '../screens/Map';
+import ViewMap from '../screens/ViewMap';
+import ViewMapp from '../screens/ViewMapp';
 
-import colors from '../utils/colors';
-
-const Tab = createBottomTabNavigator();
+import {createStackNavigator} from '@react-navigation/stack';
 
 const HomeMenu = () => {
-  return (
-    <NavigationContainer>
-        <Tab.Navigator
-            initialRouteName="Home"
-            screenOptions={{
-                tabBarStyle: { 
-                    position: 'absolute',
-                    borderRadius: 20,
-                    paddingHorizontal: 10,
-                    shadowColor: colors.BLACK,
-                    shadowOffset: {
-                        width: 0,
-                        height: 7,
+
+    const Stack = createStackNavigator();
+    return (
+        <NavigationContainer>
+            <Stack.Navigator
+                screenOptions={{
+                    cardStyle:{
+                        backgroundColor: 'white'
                     },
-                    shadowOpacity: 0.41,
-                    shadowRadius: 9.11,
-                    elevation: 8,
-                },
-            }}
-        >
-            <Tab.Screen
-                name="AttractionsNavigator" 
-                component={AttractionsNavigator}
-                options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <Feather name="aperture" color={color} size={size} />
-                    ),
-                    tabBarLabel: 'Atractivos',
-                    tabBarActiveTintColor: colors.GREEN,
-                    tabBarLabelStyle: {
-                        fontSize: 12,
-                        fontFamily: 'Lato-Bold',
-                    },
-                    headerShown: false,
-                }} 
-            />
-            <Tab.Screen 
-                name="TrekkingNavigator" 
-                component={TrekkingNavigator}
-                options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <Feather name="navigation" color={color} size={size} />
-                    ),
-                    tabBarLabel: 'Senderismo',
-                    tabBarActiveTintColor: colors.GREEN,
-                    tabBarLabelStyle: {
-                        fontSize: 12,
-                        fontFamily: 'Lato-Bold',
-                    },
-                    headerShown: false,
-                }} 
-            />
-            <Tab.Screen 
-                name="Home" 
-                component={Home} 
-                options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <Feather name="home" color={color} size={size} />
-                    ),
-                    tabBarLabel: 'Home',
-                    tabBarActiveTintColor: colors.GREEN,
-                    tabBarLabelStyle: {
-                        fontSize: 12,
-                        fontFamily: 'Lato-Bold',
-                    },
-                    headerShown: false,
+                    headerStyle:{
+                        elevation: 0,
+                        shadowColor: 'transparent',
+                    }
                 }}
-            />
-            <Tab.Screen 
-                name="CategoryNavigator" 
-                component={CategoryNavigator} 
-                options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <Feather name="layers" color={color} size={size} />
-                    ),
-                    tabBarLabel: 'Categorías',
-                    tabBarActiveTintColor: colors.GREEN,
-                    tabBarLabelStyle: {
-                        fontSize: 12,
-                        fontFamily: 'Lato-Regular',
-                    },
+                initialRouteName="HomeTabMenu"
+            >
+                <Stack.Screen
+                    name="HomeTabMenu"
+                    component={HomeTabMenu}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+                <Stack.Screen
+                    name="Attractions"
+                    component={Attractions}
+                    options={{
+                    headerShown: false
+                    }}
+                />
+                <Stack.Screen
+                    name="AtractionInfo"
+                    component={AtractionInfo}
+                    options={{
                     headerShown: false,
-                }}
-            />
-            <Tab.Screen 
-                name="InfoNavigator" 
-                component={InfoNavigator} 
-                options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <Feather name="info" color={color} size={size} />
-                    ),
-                    tabBarLabel: 'Información',
-                    tabBarActiveTintColor: colors.GREEN,
-                    tabBarLabelStyle: {
-                        fontSize: 12,
-                        fontFamily: 'Lato-Bold',
-                    },
+                    tabBarStyle:{ display: 'none' }
+                    }}
+                />
+                <Stack.Screen
+                    name="Categories"
+                    component={Categories}
+                    options={{
+                    headerShown: false
+                    }}
+                />
+                <Stack.Screen
+                    name="CategoryList"
+                    component={CategoryList}
+                    options={{
+                    headerShown: false
+                    }}
+                />
+                <Stack.Screen
+                    name="Commerce"
+                    component={Commerce}
+                    options={{
+                    headerShown: false
+                    }}
+                />
+                <Stack.Screen
+                    name="Information"
+                    component={Information}
+                    options={{
+                    headerShown: false
+                    }}
+                />
+                <Stack.Screen
+                    name="News"
+                    component={News}
+                    options={{
+                        headerShown: false
+                    }}
+                />
+                <Stack.Screen
+                    name="NewInfo"
+                    component={NewInfo}
+                    options={{
                     headerShown: false,
-                }}
-            />
-        </Tab.Navigator>
-    </NavigationContainer>
-  );
+                    tabBarStyle:{ display: 'none' }
+                    }}
+                />
+                <Stack.Screen
+                    name="InfoBanos"
+                    component={InfoBanos}
+                    options={{
+                    headerShown: false,
+                    tabBarStyle:{ display: 'none' }
+                    }}
+                />
+                <Stack.Screen
+                    name="Map"
+                    component={Map}
+                    options={{
+                    headerShown: false,
+                    tabBarStyle:{ display: 'none' }
+                    }}
+                />
+                <Stack.Screen
+                    name="ViewMap"
+                    component={ViewMap}
+                    options={{
+                    headerShown: false,
+                    tabBarStyle:{ display: 'none' }
+                    }}
+                />
+                <Stack.Screen
+                    name="ViewMapp"
+                    component={ViewMapp}
+                    options={{
+                    headerShown: false,
+                    tabBarStyle:{ display: 'none' }
+                    }}
+                />
+            </Stack.Navigator>
+        </NavigationContainer>
+    );
 }
 
-const styles = StyleSheet.create({
-    TabNavigation: {
-        height: Platform.OS === 'ios' ? 80 : 60,
-        marginTop: -80,
-        borderRadius: 10,
-        paddingLeft: 10,
-        paddingRight: 10,
-        backgroundColor: '#fff',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-});
-
 export default HomeMenu;
+
+
+
+
+

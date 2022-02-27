@@ -13,13 +13,13 @@ export default StyleSheet.create({
     },
     name:{
         fontSize: 32,
-        fontFamily: 'Lato-Bold',
+        fontFamily: 'Poppins-Bold',
         color: colors.BLACK,
         marginBottom: 10,
     },
     nameUp:{
         fontSize: 22,
-        fontFamily: 'Lato-Regular',
+        fontFamily: 'Poppins-Regular',
         color: colors.BLACK,
         marginTop: 20
     },
@@ -36,7 +36,7 @@ export default StyleSheet.create({
     },
     txtZoom:{
         fontSize: 16,
-        fontFamily: 'Lato-Regular',
+        fontFamily: 'Poppins-Regular',
         color: colors.BLACK,
     },
 });

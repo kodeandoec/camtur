@@ -10,15 +10,13 @@ export default StyleSheet.create({
     welcomeUp:{
         fontSize: 30,
         lineHeight: 30,
-        fontFamily: 'Lato-Regular',
+        fontFamily: 'Poppins-Regular',
         color: colors.BLACK,
     },
     welcomeDown:{
-        fontSize: 36,
-        lineHeight: 36,
-        fontFamily: 'Lato-Black',
+        fontSize: 24,
+        fontFamily: 'Poppins-SemiBold',
         color: colors.BLACK,
-        marginBottom: 10
     },
     image:{
         width: 95,
@@ -44,13 +42,13 @@ export default StyleSheet.create({
     },
     txtName:{
         fontSize: 18,
-        fontFamily: 'Lato-Bold',
+        fontFamily: 'Poppins-Bold',
         color: colors.BLACK,
         marginBottom: 2,
     },
     txtDate:{
         fontSize: 13,
-        fontFamily: 'Lato-Regular',
+        fontFamily: 'Poppins-Regular',
         color: colors.BLACK,
         marginLeft: 5,
     },

@@ -6,18 +6,20 @@ export default StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: colors.WHITE,
-        paddingHorizontal: '3%',
+        paddingHorizontal: '5%',
     },
     welcomeUp:{
-        fontSize: 20,
-        fontFamily: 'Lato-Regular',
+        fontSize: 28,
+        lineHeight: 32,
+        fontFamily: 'Poppins-Regular',
         color: colors.BLACK,
     },
     welcomeDown:{
-        fontSize: 30,
-        fontFamily: 'Lato-Black',
+        fontSize: 36,
+        lineHeight: 40,
+        fontFamily: 'Poppins-SemiBold',
         color: colors.BLACK,
-        marginBottom: 10
+        marginBottom: 20,
     },
     image:{
         width: '100%',
@@ -30,11 +32,11 @@ export default StyleSheet.create({
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
-            height: 3,
+            height: 1,
         },
         shadowOpacity: 0.41,
-        shadowRadius: 9.11,
-        elevation: 8,
+        shadowRadius: 5.11,
+        elevation: 2,
     },
     ctnInfo:{
         borderBottomLeftRadius: 20,
@@ -49,12 +51,12 @@ export default StyleSheet.create({
     },
     txtName:{
         fontSize: 22,
-        fontFamily: 'Lato-Bold',
+        fontFamily: 'Poppins-Bold',
         color: colors.WHITE,
     },
     txtDescription:{
         fontSize: 16,
-        fontFamily: 'Lato-Regular',
+        fontFamily: 'Poppins-Regular',
         color: colors.WHITE,
     },
 });

@@ -175,7 +175,7 @@ const tagsStyles = {
       whiteSpace: 'normal',
       color: colors.BLACK,
       fontSize: 16,
-      fontFamily: "Lato-Regular",
+      fontFamily: "Poppins-Regular",
       textAlign: 'justify',
     },
     a: {

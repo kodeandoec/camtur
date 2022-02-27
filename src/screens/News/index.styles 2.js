@@ -10,13 +10,13 @@ export default StyleSheet.create({
     welcomeUp:{
         fontSize: 30,
         lineHeight: 30,
-        fontFamily: 'Lato-Regular',
+        fontFamily: 'Poppins-Regular',
         color: colors.BLACK,
     },
     welcomeDown:{
         fontSize: 40,
         lineHeight: 40,
-        fontFamily: 'Lato-Black',
+        fontFamily: 'Poppins-Black',
         color: colors.BLACK,
         marginBottom: 10
     },
@@ -45,13 +45,13 @@ export default StyleSheet.create({
     txtName:{
         flex: 1,
         fontSize: 18,
-        fontFamily: 'Lato-Bold',
+        fontFamily: 'Poppins-Bold',
         color: colors.BLACK,
         marginBottom: 5,
     },
     txtDate:{
         fontSize: 12,
-        fontFamily: 'Lato-Regular',
+        fontFamily: 'Poppins-Regular',
         color: colors.BLACK,
         marginLeft: 5,
     },

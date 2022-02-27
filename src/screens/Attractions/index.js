@@ -34,12 +34,12 @@ const Attractions = ( { navigation }) => {
                         data={state}
                         keyExtractor={(item) => item.id}
                         showsVerticalScrollIndicator={false}
-                        ListHeaderComponent={ () => (
-                            <View style={{marginTop: 30}}>
-                                <Text style={styles.welcomeUp}>Atractivos turísticos en</Text>
-                                <Text style={styles.welcomeDown}>Baños Ecuador</Text>
-                            </View>
-                        )}
+                        // ListHeaderComponent={ () => (
+                        //     <View>
+                        //         <Text style={styles.welcomeUp}>Atractivos turísticos en</Text>
+                        //         <Text style={styles.welcomeDown}>Baños Ecuador</Text>
+                        //     </View>
+                        // )}
                         renderItem={({ item }) => (
                             <TouchableHighlight 
                                 style={styles.viewAttraction}

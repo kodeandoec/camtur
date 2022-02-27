@@ -5,7 +5,8 @@ import {
     TouchableHighlight,
     ActivityIndicator,
     FlatList,
-    Image
+    Image,
+    Linking,
 } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import useGetByCategory from '../../hooks/useGetByCategory';
@@ -14,9 +15,6 @@ import Feather from 'react-native-vector-icons/Feather';
 
 import styles from './index.styles'
 import colors from '../../utils/colors';
-
-import moment from 'moment';
-import 'moment/locale/es'
  
 const CategoryList = ( { navigation, route }) => {
 
@@ -42,39 +40,83 @@ const CategoryList = ( { navigation, route }) => {
                         keyExtractor={(item) => item.id}
                         showsVerticalScrollIndicator={false}
                         ListHeaderComponent={ () => (
-                            <View style={{ paddingHorizontal: '3%', marginTop: 30}}>
-                                {/* <Text style={styles.welcomeUp}>Baños de Agua Santa </Text> */}
-                                <Text style={styles.welcomeDown}>{name}</Text>
-                            </View>
+                            <View style={{ paddingHorizontal: '3%'}}>
+                                <View style={{ 
+                                    flexDirection: 'row', 
+                                    justifyContent: 'space-between',
+                                    alignItems: 'center',
+                                    marginBottom: 10,
+                                }}>
+                                    <TouchableHighlight
+                                        style={{
+                                            backgroundColor: colors.GREEN,
+                                            borderRadius: 100,
+                                            padding: 5,
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                        }}
+                                        onPress={ () => navigation.goBack() }
+                                    >
+                                        <Feather name="arrow-left-circle" size={30} color={colors.WHITE} />
+                                    </TouchableHighlight>
+                                    <Text style={styles.welcomeDown}>{name}</Text>
+                                </View>
+                            </View> 
                         )}
-                        renderItem={({ item }) => (
-                            <TouchableHighlight 
-                                style={styles.viewAttraction}
-                                underlayColor={colors.BG}
-                                onPress={() => navigation.navigate('Commerce', { item })}
-                                activeOpacity={0.8}
-                            >
-                                <View style={{ flexDirection: 'row', alignItems: 'center'}}>
-                                    <Image
-                                        source={{ uri: item.photo1 }}
-                                        style={styles.image}
-                                        resizeMode='cover'
-                                        resizeMethod='resize'
-                                    />
-                                    <View style={{ flex: 1, marginLeft: 10 }}>
-                                        <Text style={styles.txtName}>{item.name}</Text>
-                                        <View style={{ flexDirection: 'row', marginVertical: 5}}>
-                                            <Feather name="home" size={15} color={colors.BLACK} />
-                                            <Text style={styles.txtDate}>{item.address}</Text>
+                        renderItem={({ item }) => {
+                            return (
+                                item.type === 'commerceFull' ? (
+                                    <TouchableHighlight 
+                                        style={styles.viewAttraction}
+                                        underlayColor={colors.BG}
+                                        onPress={() => navigation.navigate('Commerce', { item })}
+                                        activeOpacity={0.8}
+                                    >
+                                        <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                                            <Image
+                                                source={{ uri: item.photo1 }}
+                                                style={styles.image}
+                                                resizeMode='cover'
+                                                resizeMethod='resize'
+                                            />
+                                            <View style={{ flex: 1, marginLeft: 10 }}>
+                                                <Text style={styles.txtName}>{item.name}</Text>
+                                                <View style={{ flexDirection: 'row', marginVertical: 5}}>
+                                                    <Feather name="home" size={15} color={colors.BLACK} />
+                                                    <Text style={styles.txtDate}>{item.address}</Text>
+                                                </View>
+                                                <View style={{ flexDirection: 'row'}}>
+                                                    <Feather name="phone-call" size={15} color={colors.BLACK} />
+                                                    <Text style={styles.txtDate}>{item.phone}</Text>
+                                                </View>
+                                            </View>
                                         </View>
-                                        <View style={{ flexDirection: 'row'}}>
-                                            <Feather name="phone-call" size={15} color={colors.BLACK} />
-                                            <Text style={styles.txtDate}>{item.phone}</Text>
+                                    </TouchableHighlight>
+                                ) : (
+                                    <View style={styles.viewAttraction}>
+                                        <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                                            <Image
+                                                source={{ uri: item.photo1 }}
+                                                style={styles.image}
+                                                resizeMode='cover'
+                                                resizeMethod='resize'
+                                            />
+                                            <View style={{ flex: 1, marginLeft: 10 }}>
+                                                <Text style={styles.txtName}>{item.name}</Text>
+                                                <View style={{ flexDirection: 'row', marginVertical: 5}}>
+                                                    <Feather name="home" size={15} color={colors.BLACK} />
+                                                    <Text style={styles.txtDate}>{item.address}</Text>
+                                                </View>
+                                                <View style={{ flexDirection: 'row'}}>
+                                                    <Feather name="phone-call" size={15} color={colors.BLACK} />
+                                                    <Text style={styles.txtDate}>{item.phone}</Text>
+                                                </View>
+                                            </View>
                                         </View>
                                     </View>
-                                </View>
-                            </TouchableHighlight>
-                        )}
+                                )
+                            )
+                        }}
                         ListFooterComponent={ () => (
                             <View style={{ height: 100 }} />
                         )}

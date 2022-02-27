@@ -36,13 +36,13 @@ export default StyleSheet.create({
     name:{
         fontSize: 32,
         lineHeight: 32,
-        fontFamily: 'Lato-Bold',
+        fontFamily: 'Poppins-Bold',
         color: colors.BLACK,
         marginBottom: 10,
     },
     description:{
         fontSize: 16,
-        fontFamily: 'Lato-Regular',
+        fontFamily: 'Poppins-Regular',
         color: colors.BLACK,
         marginBottom: 10,
         textAlign: 'justify',
@@ -62,7 +62,7 @@ export default StyleSheet.create({
         color: colors.WHITE,
         fontSize: 17,
         lineHeight: 17,
-        fontFamily: 'Lato-Bold',
+        fontFamily: 'Poppins-Bold',
         textAlign: 'center',
         alignSelf: 'center'
     },
@@ -78,7 +78,7 @@ export default StyleSheet.create({
     },
     txtDesciption:{
       color: colors.GRAY,
-      fontFamily: "Lato-Regular", 
+      fontFamily: "Poppins-Regular", 
       fontSize: 18, 
       lineHeight: 19, 
       textAlign:'justify',
@@ -86,7 +86,7 @@ export default StyleSheet.create({
     },
     txtDate:{
         fontSize: 16,
-        fontFamily: 'Lato-Regular',
+        fontFamily: 'Poppins-Regular',
         color: colors.BLACK,
         marginLeft: 5,
     },
