@@ -1,0 +1,170 @@
+import React, { useState, useRef, useEffect } from 'react'
+import { 
+    View, 
+    Text,
+    TouchableHighlight,
+    FlatList,
+    Image,
+    ActivityIndicator
+} from 'react-native'
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+
+import useGetByTagSearch from '../../hooks/useGetByTagSearch';
+import useTextSearch from '../../hooks/useTextSearch';
+
+import Feather from 'react-native-vector-icons/Feather';
+
+import styles from './index.styles'
+import colors from '../../utils/colors';
+import { TextInput } from 'react-native-gesture-handler';
+ 
+const Search = ( { navigation }) => {
+
+    const { top } = useSafeAreaInsets();
+
+    const [term, setTerm] = useState('')
+    const txtRef = useRef();
+
+    const { state, getCommercesByTag, loading } = useGetByTagSearch();
+
+    const deboncedValue = useTextSearch(term, 500);
+
+    useEffect( () => {
+        if ( term.length !== 0 ) {
+            getCommercesByTag( term )
+        }
+    }, [deboncedValue])
+
+    const ListadoVacio = () => {
+        return (
+            <View style={styles.emptyList}>
+            <Text style={styles.textEmpty}>
+                Ingresa tu criterio de búsqueda..!
+            </Text>
+            </View>
+        )
+    }
+
+    const Header = () => {
+        return (
+            <>
+                <View style={{ paddingHorizontal: '3%'}}>
+                    <View style={{ 
+                        flexDirection: 'row', 
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        marginBottom: 10,
+                    }}>
+                        <TouchableHighlight
+                            style={{
+                                backgroundColor: colors.GREEN,
+                                borderRadius: 100,
+                                padding: 5,
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                            }}
+                            onPress={ () => navigation.goBack() }
+                        >
+                            <Feather name="arrow-left-circle" size={30} color={colors.WHITE} />
+                        </TouchableHighlight>
+
+                        <TextInput 
+                            ref={txtRef}
+                            placeholder="¿Qué estás buscando?"
+                            placeholderTextColor={colors.BLACK}
+                            autoCapitalize="none"
+                            autoCorrect={ false }
+                            style={styles.textInput}
+                            keyboardType="default"
+                            onChangeText={ (e) => setTerm(e) }
+                            value={ term }
+                            blurOnSubmit
+                            autoFocus={true}
+                        /> 
+                    </View>
+                </View> 
+                
+            </>
+        )
+    }
+
+    return (
+        <View style={[styles.container, { top }]}>
+            
+            <Header />
+
+            { !loading ? (
+                <FlatList
+                    data={state}
+                    numColumns={1}
+                    keyExtractor={(item) => item.id}
+                    showsVerticalScrollIndicator={false}
+                    ListEmptyComponent={ () => <ListadoVacio /> }
+                    renderItem={({ item }) => {
+                        return (
+                            item.type === 'commerceFull' ? (
+                                <TouchableHighlight 
+                                    style={styles.viewAttraction}
+                                    underlayColor={colors.BG}
+                                    onPress={() => navigation.navigate('Commerce', { item })}
+                                    activeOpacity={0.8}
+                                >
+                                    <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                                        <Image
+                                            source={{ uri: item.photo1 }}
+                                            style={styles.image}
+                                            resizeMode='cover'
+                                            resizeMethod='resize'
+                                        />
+                                        <View style={{ flex: 1, marginLeft: 10, marginRight: 10 }}>
+                                            <Text style={styles.txtName}>{item.name}</Text>
+                                            <View style={{ flexDirection: 'row'}}>
+                                                <Feather name="home" size={15} color={colors.BLACK} />
+                                                <Text style={styles.txtDate}>{item.address}</Text>
+                                            </View>
+                                            <View style={{ flexDirection: 'row'}}>
+                                                <Feather name="phone-call" size={15} color={colors.BLACK} />
+                                                <Text style={styles.txtDate}>{item.phone}</Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </TouchableHighlight>
+                            ) : (
+                                <View style={styles.viewAttraction}>
+                                    <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                                        <Image
+                                            source={{ uri: item.photo1 }}
+                                            style={styles.image}
+                                            resizeMode='cover'
+                                            resizeMethod='resize'
+                                        />
+                                        <View style={{ flex: 1, marginLeft: 10 }}>
+                                            <Text style={styles.txtName}>{item.name}</Text>
+                                            <View style={{ flexDirection: 'row', marginVertical: 5}}>
+                                                <Feather name="home" size={15} color={colors.BLACK} />
+                                                <Text style={styles.txtDate}>{item.address}</Text>
+                                            </View>
+                                            <View style={{ flexDirection: 'row'}}>
+                                                <Feather name="phone-call" size={15} color={colors.BLACK} />
+                                                <Text style={styles.txtDate}>{item.phone}</Text>
+                                            </View>
+                                        </View>
+                                    </View>
+                                </View>
+                            )
+                        )
+                    }}
+                    ListFooterComponent={ () => (
+                        <View style={{ height: 100 }} />
+                    )}
+                />
+            ) : (
+                <View style={{ marginTop: 100, justifyContent: 'center', alignItems: 'center' }}>
+                    <ActivityIndicator size="large" color={colors.GREEN} />
+                </View>
+            )}
+        </View>
+    )
+}
+ 
+export default Search;

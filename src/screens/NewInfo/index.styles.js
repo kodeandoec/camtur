@@ -7,38 +7,35 @@ const { width, height } = Dimensions.get('screen');
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.BG,
+        backgroundColor: colors.WHITE,
+        marginHorizontal: '2.5%',
     },
     wrapper: {
-        height: height / 1.8,
+        height: height / 2.1,
     },
     slide: {
         width,
-        height: height / 1.8,
+        height: height / 2.1,
     },
     image:{
-        width,
-        height: height / 1.8,
+        width: '100%',
+        height: height / 2.1,
+        borderRadius: 20,
     },
     content:{
-        paddingHorizontal: '2%',
         paddingVertical: 20,
-        borderRadius: 20,
-        top: -60,
     },
     contenData:{
-        marginHorizontal: '1%',
-        paddingHorizontal: '5%',
+        paddingHorizontal: '2.5%',
         paddingVertical: 20,
         backgroundColor: colors.WHITE,
         borderRadius: 20,
     },
     name:{
         fontSize: 32,
-        lineHeight: 32,
+        lineHeight: 34,
         fontFamily: 'Poppins-Bold',
         color: colors.BLACK,
-        marginBottom: 10,
     },
     description:{
         fontSize: 16,

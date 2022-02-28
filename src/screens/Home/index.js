@@ -78,7 +78,7 @@ const Home = ( { navigation }) => {
     const { state: commerces } = useGetCommercesRand();
     const { state: attractions } = useGetAttractionsRand();
     
-    const Header = ( { navigation }) => {
+    const Header = ( ) => {
         return (
             <>
                 <View style={[styles.headerView, { paddingHorizontal: '5%'}]}>
@@ -119,7 +119,7 @@ const Home = ( { navigation }) => {
                 </View>
                 <View style={{ paddingHorizontal: '5%' }}>
                     <Text style={styles.txtWelcomeUp}>Bienvenido a</Text>
-                    <Text style={styles.txtWelcomeDown}>Baños Ecuador..!</Text>
+                    <Text style={styles.txtWelcomeDown}>Visit Baños..!</Text>
                 </View>
             </>
         )   
@@ -140,10 +140,19 @@ const Home = ( { navigation }) => {
                 <Header />
 
                 <View style={styles.searchView}>
-                    <View style={styles.searchIcon}>
+                    <Pressable 
+                        onPress={() => navigation.navigate('Search')}
+                        style={styles.searchIcon}
+                    >
                         <Ionicons name="ios-search" size={24} color={colors.NEW1} />
-                    </View>
-                    <Text style={styles.searchInput}>Qué estás buscando..?</Text>
+                    </Pressable>
+                    
+                    <Pressable 
+                        onPress={() => navigation.navigate('Search')}
+                    >
+                        <Text style={styles.searchInput}>Qué estás buscando?</Text>
+                    </Pressable>
+
                     <Pressable 
                         onPress={() => navigation.navigate('Categories')}
                         style={styles.searchIcon}

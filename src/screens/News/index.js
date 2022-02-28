@@ -45,11 +45,10 @@ const News = ( { navigation }) => {
                         keyExtractor={(item) => item.id}
                         showsVerticalScrollIndicator={false}
                         ListHeaderComponent={ () => (
-                            <View style={{ paddingHorizontal: '3%'}}>
+                            <View>
                                 <TouchableHighlight
                                     style={{ 
-                                        position: 'absolute', 
-                                        left: 10, 
+                                        alignSelf: 'flex-start',
                                         backgroundColor: colors.BG,
                                         borderRadius: 200,
                                         padding: 10,
@@ -60,6 +59,7 @@ const News = ( { navigation }) => {
                                 >
                                     <Feather name="arrow-left" size={30} color={colors.GREEN} />
                                 </TouchableHighlight>
+
                                 <Text style={styles.welcomeUp}>Noticias</Text>
                                 <Text style={styles.welcomeDown}>Importantes</Text>
                             </View>
@@ -92,9 +92,6 @@ const News = ( { navigation }) => {
                             <View style={{ height: 100 }} />
                         )}
                     />
-
-
-
                 </View>
             )}
         </>

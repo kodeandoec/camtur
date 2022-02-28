@@ -7,23 +7,24 @@ const { width, height } = Dimensions.get('screen');
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#EBF1EB',
+        backgroundColor: colors.WHITE,
         paddingHorizontal: '2%',
     },
     contenData:{
         paddingHorizontal: '5%',
-        paddingVertical: 20,
         backgroundColor: colors.WHITE,
         borderRadius: 20,
         marginBottom: 20,
     },
     welcomeUp:{
-        fontSize: 20,
+        fontSize: 18,
+        lineHeight: 22,
         fontFamily: 'Poppins-Regular',
         color: colors.BLACK,
     },
     welcomeDown:{
         fontSize: 30,
+        lineHeight: 32,
         fontFamily: 'Poppins-Black',
         color: colors.BLACK,
         marginBottom: 20
@@ -68,7 +69,8 @@ export default StyleSheet.create({
         marginBottom: 10,
     },
     image:{
-        width: '100%',
+        width: '80%',
+        marginHorizontal: '10%',
         height: 200,
         marginBottom: 20,
     },
@@ -85,7 +87,7 @@ export default StyleSheet.create({
     txtInfo:{
         flex: 1,
         fontSize: 17,
-        lineHeight: 17,
+        lineHeight: 19,
         fontFamily: 'Poppins-Regular',
         marginLeft: 10,
     },
@@ -117,7 +119,6 @@ export default StyleSheet.create({
     btnText:{
         color: colors.WHITE,
         fontSize: 17,
-        lineHeight: 17,
         fontFamily: 'Poppins-Bold',
         textAlign: 'center',
         alignSelf: 'center'
@@ -149,8 +150,8 @@ export default StyleSheet.create({
     txtInfos:{
         color: colors.BLACK,
         fontSize: 18,
-        lineHeight: 18,
-        fontFamily: 'Poppins-Regular',
+        lineHeight: 20,
+        fontFamily: 'Poppins-SemiBold',
         flex: 1,
         marginLeft: 10,
     },
@@ -160,5 +161,17 @@ export default StyleSheet.create({
         borderRadius: 50,
         justifyContent: 'center',
         alignItems: 'center',
-    }
+    },
+    timer:{
+        fontSize: 19,
+        fontFamily: 'Poppins-Bold',
+        color: colors.BLACK,
+    },
+    lineBottom:{
+        backgroundColor: colors.NEW5,
+        height: 3.9,
+        width: '15%',
+        marginBottom: 10,
+        borderRadius: 50,
+    },
 });

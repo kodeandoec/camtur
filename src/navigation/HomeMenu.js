@@ -16,6 +16,7 @@ import InfoBanos from '../screens/InfoBanos';
 import Map from '../screens/Map';
 import ViewMap from '../screens/ViewMap';
 import ViewMapp from '../screens/ViewMapp';
+import Search from '../screens/Search';
 
 import {createStackNavigator} from '@react-navigation/stack';
 
@@ -128,6 +129,14 @@ const HomeMenu = () => {
                 <Stack.Screen
                     name="ViewMapp"
                     component={ViewMapp}
+                    options={{
+                    headerShown: false,
+                    tabBarStyle:{ display: 'none' }
+                    }}
+                />
+                <Stack.Screen
+                    name="Search"
+                    component={Search}
                     options={{
                     headerShown: false,
                     tabBarStyle:{ display: 'none' }

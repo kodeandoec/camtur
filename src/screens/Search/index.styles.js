@@ -6,30 +6,28 @@ export default StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: colors.WHITE,
-        paddingHorizontal: '5%'
     },
     welcomeUp:{
-        fontSize: 28,
-        lineHeight: 32,
+        fontSize: 30,
+        lineHeight: 30,
         fontFamily: 'Poppins-Regular',
         color: colors.BLACK,
-        marginTop: 5,
     },
     welcomeDown:{
-        fontSize: 36,
-        lineHeight: 40,
+        fontSize: 24,
         fontFamily: 'Poppins-SemiBold',
         color: colors.BLACK,
     },
     image:{
-        width: 50,
-        height: 50,
-        borderRadius: 100,
+        width: 95,
+        height: 95,
+        borderRadius: 75 / 4,
     },
     viewAttraction:{
         borderBottomColor: colors.BG,
         borderBottomWidth: 1,
-        paddingVertical: 10,
+        paddingVertical: 20,
+        paddingHorizontal: '3%',
     },
     ctnInfo:{
         borderRadius: 20,
@@ -43,16 +41,35 @@ export default StyleSheet.create({
         padding: 20,
     },
     txtName:{
-        flex: 1,
         fontSize: 18,
-        lineHeight: 20,
         fontFamily: 'Poppins-Bold',
         color: colors.BLACK,
+        marginBottom: 2,
     },
     txtDate:{
-        fontSize: 12,
+        fontSize: 13,
         fontFamily: 'Poppins-Regular',
         color: colors.BLACK,
         marginLeft: 5,
+    },
+    textEmpty:{
+      fontFamily: 'Poppins-Regular',
+      fontSize: 16,
+      color: colors.GRAY,
+      textAlign: 'center'
+    },
+    emptyList:{
+      flex: 1,
+      marginHorizontal: '5%',
+    },
+    textInput:{
+      flex: 1,
+      fontFamily: 'Poppins-Regular',
+      fontSize: 16,
+      backgroundColor: colors.BG,
+      paddingVertical: 10,
+      paddingHorizontal: 20,
+      borderRadius: 20,
+      marginLeft: 10,
     },
 });

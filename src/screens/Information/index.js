@@ -8,6 +8,7 @@ import {
     TouchableHighlight,
     Linking,
     Platform,
+    Alert
 } from 'react-native'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -15,6 +16,7 @@ import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import getDirections from 'react-native-google-maps-directions'
 
 import Feather from 'react-native-vector-icons/Feather';
+import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import styles from './index.styles'
 import colors from '../../utils/colors';
@@ -42,6 +44,27 @@ const Information = ( {navigation} ) => {
         getDirections(data)
     }
 
+    const openWhatsApp = () => {
+        const message = "Hola! Quisiera información sobre Baños..!";
+        const cellNumber = '593999377340';
+    
+        var url = 'whatsapp://send?text=' +  message + '&phone=' + cellNumber;
+        
+        Linking.openURL(url)
+          .then(data => {
+            console.log("WhatsApp Opened successfully " + data);
+          })
+          .catch(() => {
+            Alert.alert(
+              "Error..!",
+              "Ha ocrurrido un error al abrir WhatsApp ó no tiene la app instalada..!",
+              [
+                { text: "OK" }
+              ]
+            );
+          });
+    };
+
     const { top } = useSafeAreaInsets();
     return (
         <ScrollView 
@@ -62,7 +85,10 @@ const Information = ( {navigation} ) => {
 
             <View style={styles.contenData}>
                 <Text style={styles.welcomeUp}>Cámara de turismo de</Text>
-                <Text style={styles.welcomeDown}>Baños </Text>
+                <Text style={styles.welcomeDown}>Baños Ecuador</Text>
+
+                <Text style={styles.timer}>Información de Contacto:</Text>
+                <View style={styles.lineBottom} />
 
                 <View style={styles.viewInfo}>
                     <View style={styles.icon}>
@@ -70,6 +96,19 @@ const Information = ( {navigation} ) => {
                     </View>
                     <Text style={styles.txtInfo}>Halflants 6 - 26 y Ambato, Baños - Tungurahua - Ecuador</Text>
                 </View>
+
+                <TouchableHighlight
+                    style={styles.viewInfo}
+                    onPress={() => openWhatsApp()}
+                    underlayColor={colors.BG}
+                >
+                    <>
+                    <View style={styles.icon}>
+                        <Ionicons name="logo-whatsapp" size={20} color={colors.WHITE} />
+                    </View>
+                    <Text style={styles.txtInfo}>+593 99 937 7340</Text>
+                    </>
+                </TouchableHighlight>
 
                 <TouchableHighlight
                     style={styles.viewInfo}
@@ -151,6 +190,8 @@ const Information = ( {navigation} ) => {
             </View>
 
             <View style={styles.contenData}>
+                <Text style={styles.timer}>Mapa de Ubicación:</Text>
+                <View style={styles.lineBottom} />
                 <MapView
                     provider={Platform.OS === 'ios' ? null : PROVIDER_GOOGLE}
                     style={styles.map}
@@ -183,7 +224,7 @@ const Information = ( {navigation} ) => {
                     activeOpacity={0.8}
                     style={styles.btnGetDirections}
                 >
-                    <Text style={styles.btnText}>Llévame a la oficina de la CAMTUR</Text>
+                    <Text style={styles.btnText}>Llévame a la CAMTUR</Text>
                 </TouchableHighlight>
             </View>
 

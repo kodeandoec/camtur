@@ -196,11 +196,9 @@ export default StyleSheet.create({
         borderRadius: 15,
     },
     searchInput:{
-        flex: 1,
         fontSize: 16,
         fontFamily: 'Poppins-Regular',
         color: colors.BLACK,
-        marginHorizontal: 10
     },
     searchIcon:{
         padding: 10,
