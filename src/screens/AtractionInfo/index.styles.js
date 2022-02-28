@@ -7,29 +7,27 @@ const { width, height } = Dimensions.get('screen');
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.BG,
+        marginHorizontal: '2.5%',
     },
     wrapper: {
-        height: height / 1.8,
+        height: height / 2.1,
     },
     slide: {
-        width,
-        height: height / 1.8,
+        width: '100%',
+        height: height / 2.1,
     },
     image:{
-        width,
-        height: height / 1.8,
+        width: '100%',
+        height: height / 2.1,
+        borderRadius: 15,
     },
     content:{
-        paddingHorizontal: '2%',
         paddingVertical: 20,
         borderRadius: 20,
-        top: -60,
     },
     contenData:{
-        marginHorizontal: '1%',
-        paddingHorizontal: '5%',
-        paddingVertical: 20,
+        paddingHorizontal: '2.5%',
+        paddingVertical: 10,
         backgroundColor: colors.WHITE,
         borderRadius: 20,
     },

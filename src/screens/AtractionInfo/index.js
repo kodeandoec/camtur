@@ -50,14 +50,14 @@ const AtractionInfo = ({ route, navigation }) => {
 
     return (
         <ScrollView 
-            style={styles.container}
+            style={[styles.container, { top }]}
             showsVerticalScrollIndicator={false}
         >
             <TouchableHighlight
                 style={{ 
                     position: 'absolute', 
-                    top, 
-                    left: 20, 
+                    top: 5,
+                    left: 5,
                     zIndex: 10,
                     backgroundColor: colors.WHITE,
                     borderRadius: 200,
@@ -69,6 +69,7 @@ const AtractionInfo = ({ route, navigation }) => {
             >
                 <Feather name="arrow-left" size={30} color={colors.GREEN} />
             </TouchableHighlight>
+            
             <Swiper 
                 style={styles.wrapper} 
                 showsButtons={false}

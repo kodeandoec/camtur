@@ -36,14 +36,14 @@ const InfoBanos = ({ navigation }) => {
             ) 
             : (
                 <ScrollView 
-                    style={styles.container}
+                    style={[styles.container, { top }]}
                     showsVerticalScrollIndicator={false}
                 >
                     <TouchableHighlight
                         style={{ 
                             position: 'absolute', 
-                            top, 
-                            left: 20, 
+                            top: 5, 
+                            left: 5, 
                             zIndex: 10,
                             backgroundColor: colors.WHITE,
                             borderRadius: 200,
@@ -61,12 +61,12 @@ const InfoBanos = ({ navigation }) => {
                             <Image
                                 source={{uri: item.image}}
                                 style={{
-                                    width: width,
+                                    width: '100%',
                                     height: height / 2,
-                                    marginBottom: 20,
+                                    borderRadius: 15
                                 }}
                             />
-                            <View style={[styles.content, { marginTop: -80}]}>
+                            <View style={[styles.content]}>
                                 <View style={styles.contenData}>
                                     <Text style={styles.nameUp}>Información importante de</Text>
                                     <Text style={styles.name}>Baños Ecuador</Text>

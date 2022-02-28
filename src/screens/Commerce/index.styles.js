@@ -7,7 +7,8 @@ const { width, height } = Dimensions.get('screen');
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: colors.BG,
+        paddingHorizontal: '2.5%',
+        backgroundColor: colors.WHITE,
     },
     wrapper: {
         height: height / 2,
@@ -17,24 +18,22 @@ export default StyleSheet.create({
         height: height / 2,
     },
     image:{
-        width,
+        width: '100%',
         height: height / 2,
+        borderRadius: 15
     },
     content:{
         paddingVertical: 20,
-        backgroundColor: colors.BG,
-        borderRadius: 20,
     },
     contenData:{
-        marginHorizontal: '3%',
-        paddingHorizontal: '5%',
-        paddingVertical: 20,
+        paddingHorizontal: '2.5%',
         backgroundColor: colors.WHITE,
         borderRadius: 20,
+        marginBottom: 20,
     },
     name:{
         fontSize: 32,
-        lineHeight: 32,
+        lineHeight: 36,
         fontFamily: 'Poppins-Bold',
         color: colors.BLACK,
         marginBottom: 10,
@@ -86,7 +85,7 @@ export default StyleSheet.create({
     viewInfo:{
         flexDirection: 'row', 
         alignItems: 'center', 
-        paddingVertical: 7,
+        paddingVertical: 10,
         borderBottomColor: colors.SILVER,
         borderBottomWidth: 1,
     },
@@ -100,7 +99,7 @@ export default StyleSheet.create({
     txtInfo:{
         flex: 1,
         fontSize: 17,
-        lineHeight: 17,
+        lineHeight: 21,
         fontFamily: 'Poppins-Regular',
         marginLeft: 10,
     },
@@ -108,8 +107,38 @@ export default StyleSheet.create({
         fontSize: 19,
         fontFamily: 'Poppins-Bold',
         color: colors.BLACK,
+    },
+    lineBottom:{
+        backgroundColor: colors.NEW5,
+        height: 3.9,
+        width: '15%',
         marginBottom: 10,
-        textAlign: 'justify',
-        textTransform: 'uppercase',
+        borderRadius: 50,
+    },
+    callNow:{
+        flexDirection: 'row',
+        position: 'absolute',
+        bottom: 10,
+        right: 10,
+        backgroundColor: colors.GREEN,
+        paddingVertical: 10,
+        paddingHorizontal: 20,
+        borderRadius: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    callNowUp:{
+        fontSize: 10,
+        lineHeight: 12,
+        fontFamily: 'Poppins-Regular',
+        color: colors.WHITE,
+        textAlign: 'center',
+    },
+    callNowDown:{
+        fontSize: 16,
+        lineHeight: 18,
+        fontFamily: 'Poppins-Semibold',
+        color: colors.WHITE,
+        textAlign: 'center',
     },
 });

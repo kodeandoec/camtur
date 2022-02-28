@@ -74,14 +74,14 @@ const Commerce = ({ route, navigation }) => {
 
     return (
         <ScrollView 
-            style={styles.container}
+            style={[styles.container, { top }]}
             showsVerticalScrollIndicator={false}
         >
             <TouchableHighlight
                 style={{ 
                     position: 'absolute', 
-                    top, 
-                    left: 20, 
+                    top: 5, 
+                    left: 5, 
                     zIndex: 10,
                     backgroundColor: colors.WHITE,
                     borderRadius: 200,
@@ -93,58 +93,68 @@ const Commerce = ({ route, navigation }) => {
             >
                 <Feather name="arrow-left" size={30} color={colors.GREEN} />
             </TouchableHighlight>
-            <Swiper 
-                style={styles.wrapper} 
-                showsButtons={false}
-                showsPagination={false}
-                autoplay={true}
-                autoplayTimeout={3.5}
-                loop={true}
-            >
-                { item.photo1 && (
-                    <Image
-                        source={{ uri: item.photo1 }}
-                        style={styles.image}
-                        resizeMode='cover'
-                        resizeMethod='resize'
-                    />
-                )}
-                { item.photo2 && (
-                    <Image
-                        source={{ uri: item.photo2 }}
-                        style={styles.image}
-                        resizeMode='cover'
-                        resizeMethod='resize'
-                    />
-                )}
-                { item.photo3 && (
-                    <Image
-                        source={{ uri: item.photo3 }}
-                        style={styles.image}
-                        resizeMode='cover'
-                        resizeMethod='resize'
-                    />
-                )}
-                { item.photo4 && (
-                    <Image
-                        source={{ uri: item.photo4 }}
-                        style={styles.image}
-                        resizeMode='cover'
-                        resizeMethod='resize'
-                    />
-                )}
-                { item.photo5 && (
-                    <Image
-                        source={{ uri: item.photo5 }}
-                        style={styles.image}
-                        resizeMode='cover'
-                        resizeMethod='resize'
-                    />
-                )}
-            </Swiper>
 
+            <View>
+                <Swiper 
+                    style={styles.wrapper} 
+                    showsButtons={false}
+                    showsPagination={false}
+                    autoplay={true}
+                    autoplayTimeout={3.5}
+                    loop={true}
+                >
+                    { item.photo1 && (
+                        <Image
+                            source={{ uri: item.photo1 }}
+                            style={styles.image}
+                            resizeMode='cover'
+                            resizeMethod='resize'
+                        />
+                    )}
+                    { item.photo2 && (
+                        <Image
+                            source={{ uri: item.photo2 }}
+                            style={styles.image}
+                            resizeMode='cover'
+                            resizeMethod='resize'
+                        />
+                    )}
+                    { item.photo3 && (
+                        <Image
+                            source={{ uri: item.photo3 }}
+                            style={styles.image}
+                            resizeMode='cover'
+                            resizeMethod='resize'
+                        />
+                    )}
+                    { item.photo4 && (
+                        <Image
+                            source={{ uri: item.photo4 }}
+                            style={styles.image}
+                            resizeMode='cover'
+                            resizeMethod='resize'
+                        />
+                    )}
+                    { item.photo5 && (
+                        <Image
+                            source={{ uri: item.photo5 }}
+                            style={styles.image}
+                            resizeMode='cover'
+                            resizeMethod='resize'
+                        />
+                    )}
+                </Swiper>
+                <View style={styles.callNow}>
+                    <Feather name="phone-call" size={28} color={colors.WHITE} />
+                    <View style={{ marginLeft: 10 }}>
+                        <Text style={styles.callNowUp}>Llamar</Text>
+                        <Text style={styles.callNowDown}>Ahora</Text>
+                    </View>
+                </View>
+            </View>
             <View style={styles.content}>
-                <View style={[styles.contenData, {top: -60}]}>
+                
+                <View style={[ styles.contenData, { marginTop: 20 } ]}>
                     <Text style={styles.name}>{item.name}</Text>
 
                     <RenderHtml
@@ -155,8 +165,9 @@ const Commerce = ({ route, navigation }) => {
                     />
                 </View>
 
-                <View style={[styles.contenData, {top: -30}]}>
-                    <Text style={styles.timer}>Precios</Text>
+                <View style={[styles.contenData]}>
+                    <Text style={styles.timer}>Precios:</Text>
+                    <View style={styles.lineBottom} />
 
                     <RenderHtml
                         contentWidth={width}
@@ -167,7 +178,8 @@ const Commerce = ({ route, navigation }) => {
                 </View>
 
                 <View style={styles.contenData}>
-                    <Text style={styles.timer}>Horario de atención</Text>
+                    <Text style={styles.timer}>Horario de atención:</Text>
+                    <View style={styles.lineBottom} />
 
                     <RenderHtml
                         contentWidth={width}
@@ -177,8 +189,9 @@ const Commerce = ({ route, navigation }) => {
                     />
                 </View>
 
-                <View style={[styles.contenData, {marginTop: 30}]}>
-                    <Text style={styles.timer}>Datos de Contacto</Text>
+                <View style={[styles.contenData]}>
+                    <Text style={styles.timer}>Datos de Contacto:</Text>
+                    <View style={styles.lineBottom} />
 
                     <TouchableHighlight
                         style={styles.viewInfo}
@@ -284,7 +297,7 @@ const Commerce = ({ route, navigation }) => {
                     ) : null }
                 </View>
 
-                <View style={[styles.contenData, {marginTop: 30}]}>
+                <View style={ styles.contenData }>
 
                     <MapView
                         provider={PROVIDER_GOOGLE} // remove if not using Google Maps
@@ -323,7 +336,8 @@ const Commerce = ({ route, navigation }) => {
                     </TouchableHighlight>
                 </View>
             </View>
-            <View style={{ height: 80, backgroundColor: colors.BG }} />
+
+            <View style={{ height: 20 }} />
         </ScrollView>
     )
 }

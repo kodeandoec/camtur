@@ -79,7 +79,7 @@ const CategoryList = ( { navigation, route }) => {
                                                 resizeMode='cover'
                                                 resizeMethod='resize'
                                             />
-                                            <View style={{ flex: 1, marginLeft: 10 }}>
+                                            <View style={{ flex: 1, marginLeft: 10, marginRight: 10 }}>
                                                 <Text style={styles.txtName}>{item.name}</Text>
                                                 <View style={{ flexDirection: 'row', marginVertical: 5}}>
                                                     <Feather name="home" size={15} color={colors.BLACK} />
@@ -121,8 +121,6 @@ const CategoryList = ( { navigation, route }) => {
                             <View style={{ height: 100 }} />
                         )}
                     />
-
-
 
                 </View>
             )}

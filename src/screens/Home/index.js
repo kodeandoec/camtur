@@ -144,9 +144,12 @@ const Home = ( { navigation }) => {
                         <Ionicons name="ios-search" size={24} color={colors.NEW1} />
                     </View>
                     <Text style={styles.searchInput}>Qué estás buscando..?</Text>
-                    <View style={styles.searchIcon}>
+                    <Pressable 
+                        onPress={() => navigation.navigate('Categories')}
+                        style={styles.searchIcon}
+                    >
                         <Ionicons name="options-sharp" size={24} color={colors.NEW1} />
-                    </View>
+                    </Pressable>
                 </View>
 
                 <Text style={styles.titleCaption}>Categorías</Text>

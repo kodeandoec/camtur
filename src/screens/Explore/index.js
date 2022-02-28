@@ -183,7 +183,7 @@ const Explore = ( { navigation } ) => {
                     horizontal
                     keyExtractor={(item) => item.id}
                     showsHorizontalScrollIndicator={false}
-                    contentContainerStyle={{ paddingLeft: '5%', paddingRight: '5%' }}
+                    contentContainerStyle={{ paddingRight: '5%' }}
                     renderItem={({ item }) => (
                         <Pressable 
                             onPress={() => navigation.navigate(
@@ -234,7 +234,20 @@ const Explore = ( { navigation } ) => {
 
 
 const styles = StyleSheet.create({
-
+    ctnInfo:{
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 20,
+    },
+    txtName:{
+        fontSize: 16,
+        fontFamily: 'Poppins-SemiBold',
+        color: colors.BLACK,
+        textAlign: 'center',
+        marginLeft: 15,
+        marginRight: 15,
+    },
     markerq: {
         width: 24,
         height: 24,
@@ -398,6 +411,14 @@ const styles = StyleSheet.create({
       fontSize: 10,
       color: '#FFF',
       textTransform: 'uppercase'
+    },
+    viewAttraction:{
+        flexDirection: 'row',
+    },
+    imageCat:{
+        width: 68,
+        height: 68,
+        borderRadius: 15,
     },
 })
  
