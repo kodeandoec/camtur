@@ -21,18 +21,19 @@
 		66D45EF6A5704BF0ADE0BFAE /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E7F66CCC19AF4A2DAC2DEB8E /* Poppins-ExtraBold.ttf */; };
 		776EC67595ED4F23B45EEB11 /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C9A1932BEFA42B1915202BC /* Poppins-ExtraLightItalic.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		8FF560166B2BCDEA9D58E140 /* libPods-camtur-camturTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1FD52E50C34BC0BAC91989 /* libPods-camtur-camturTests.a */; };
 		A3DBAD4CF6E942FC90FD3F2B /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 59155C0B507D40009DEEA2BF /* Poppins-Black.ttf */; };
 		AAB7FB5BCCAA448A9AD785C5 /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF2E9218A8AE4048A33B9D58 /* Poppins-Italic.ttf */; };
 		B04089E2E16D41FAAE756AC5 /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 933F71C4A8204C5AAD2BB0B4 /* Poppins-BlackItalic.ttf */; };
 		BE8CA1E2C0654093BF04A359 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 67C16FA75FB44C3BAD269892 /* Poppins-Bold.ttf */; };
 		C61F987E278E8BF300AE02D7 /* cabecera.png in Resources */ = {isa = PBXBuildFile; fileRef = C61F987D278E8BF300AE02D7 /* cabecera.png */; };
 		C637089A278B4306004BBF15 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = C6370899278B4306004BBF15 /* Fonts */; };
+		C6EA51E727D3909D00FE8FD5 /* logosc.png in Resources */ = {isa = PBXBuildFile; fileRef = C6EA51E627D3909C00FE8FD5 /* logosc.png */; };
 		E5E44BEA61464AF295E9E86F /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F4A9D6B307774119A8C00740 /* Poppins-Light.ttf */; };
-		E9F87C11EB559418DBDAD7E3 /* libPods-camtur.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D671D821CD7191CEC1DD3695 /* libPods-camtur.a */; };
+		ED9A04EC882E21E56242BB0C /* libPods-camtur.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D0B7B70B44004CCA433611 /* libPods-camtur.a */; };
 		F08D754127C049F6B8A25E48 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CADBDC3FAA1E4AEDB7F27883 /* Poppins-ExtraLight.ttf */; };
 		F0CD16654148460BA1E48882 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B97B8F3C23D465CA52ECE66 /* Poppins-Medium.ttf */; };
 		F7AB3D80AF1C40FF8518AF26 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BEEDE25A3EE4A5B9BD7363D /* Poppins-SemiBold.ttf */; };
+		F8931C406B7D7696CF53FC55 /* libPods-camtur-camturTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19382FA93D5A44A9EF4174B8 /* libPods-camtur-camturTests.a */; };
 		F9AA1BB8332A4B3690DD9BEC /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5001CBED4B9044B9BC53EA51 /* Poppins-LightItalic.ttf */; };
 /* End PBXBuildFile section */
 
@@ -59,16 +60,13 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = camtur/main.m; sourceTree = "<group>"; };
 		179FBD358DDC4746A87A3070 /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		1835161FBED5435AAE62E238 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Regular.ttf"; path = "../assets/fonts/Poppins-Regular.ttf"; sourceTree = "<group>"; };
-		1C3B2C3957FE4196A2316E88 /* Lato-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Thin.ttf"; path = "../assets/fonts/Lato-Thin.ttf"; sourceTree = "<group>"; };
+		19382FA93D5A44A9EF4174B8 /* libPods-camtur-camturTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-camtur-camturTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E99888DF5804093BD268C56 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
-		32855C25994F065DDA7F53C9 /* Pods-camtur-camturTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camtur-camturTests.release.xcconfig"; path = "Target Support Files/Pods-camtur-camturTests/Pods-camtur-camturTests.release.xcconfig"; sourceTree = "<group>"; };
 		373A3F0C3F1744D99D2EA4F6 /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
 		3B97B8F3C23D465CA52ECE66 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Medium.ttf"; path = "../assets/fonts/Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		3E930E7001C54DE09F3ACF63 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
-		4216701DEA1C779380718BD7 /* Pods-camtur-camturTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camtur-camturTests.debug.xcconfig"; path = "Target Support Files/Pods-camtur-camturTests/Pods-camtur-camturTests.debug.xcconfig"; sourceTree = "<group>"; };
 		454603586C8841508EDC5890 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
 		4727843D98E64915B49DF9EC /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-MediumItalic.ttf"; path = "../assets/fonts/Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
-		47C04E23E0914E0C8DE2CB6E /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BlackItalic.ttf"; path = "../assets/fonts/Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
 		4920E049934A4DB0B9F5E8A2 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ThinItalic.ttf"; path = "../assets/fonts/Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
 		4BEEDE25A3EE4A5B9BD7363D /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBold.ttf"; path = "../assets/fonts/Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		4C9A1932BEFA42B1915202BC /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLightItalic.ttf"; path = "../assets/fonts/Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
@@ -77,9 +75,6 @@
 		59155C0B507D40009DEEA2BF /* Poppins-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Black.ttf"; path = "../assets/fonts/Poppins-Black.ttf"; sourceTree = "<group>"; };
 		5D848DF765F74B3696A42B8A /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
 		67C16FA75FB44C3BAD269892 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Bold.ttf"; path = "../assets/fonts/Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		6A15D3648D8B464795887B7F /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-ThinItalic.ttf"; path = "../assets/fonts/Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
-		6D6E6DDFA1AF30FF06586085 /* Pods-camtur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camtur.debug.xcconfig"; path = "Target Support Files/Pods-camtur/Pods-camtur.debug.xcconfig"; sourceTree = "<group>"; };
-		741FA3A3317B46A283610079 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-LightItalic.ttf"; path = "../assets/fonts/Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		75B92056215D45FAA5950231 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Feather.ttf"; sourceTree = "<group>"; };
 		7EB907D531924D83B93471AD /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BoldItalic.ttf"; path = "../assets/fonts/Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
 		7FF5B742B56D420997F4330B /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
@@ -90,25 +85,22 @@
 		91DEF198B6E14489833B0C1F /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBoldItalic.ttf"; path = "../assets/fonts/Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		933F71C4A8204C5AAD2BB0B4 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-BlackItalic.ttf"; path = "../assets/fonts/Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
 		94DB039AACD5430385BC6B70 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Thin.ttf"; path = "../assets/fonts/Poppins-Thin.ttf"; sourceTree = "<group>"; };
-		9DE70F5F1988482986177570 /* Lato-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Light.ttf"; path = "../assets/fonts/Lato-Light.ttf"; sourceTree = "<group>"; };
-		A161A7EA6F7845DEADE09FAF /* Lato-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Italic.ttf"; path = "../assets/fonts/Lato-Italic.ttf"; sourceTree = "<group>"; };
-		AC06C982694B48FA9C7A889F /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-BoldItalic.ttf"; path = "../assets/fonts/Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A8852454CF4A8588187F3BF6 /* Pods-camtur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camtur.release.xcconfig"; path = "Target Support Files/Pods-camtur/Pods-camtur.release.xcconfig"; sourceTree = "<group>"; };
 		AD107268E1A1443F8D603F64 /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		C53DAA91A24A2A8D3BF942FA /* Pods-camtur.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camtur.debug.xcconfig"; path = "Target Support Files/Pods-camtur/Pods-camtur.debug.xcconfig"; sourceTree = "<group>"; };
 		C61F987D278E8BF300AE02D7 /* cabecera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cabecera.png; sourceTree = "<group>"; };
 		C6370899278B4306004BBF15 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
+		C6EA51E627D3909C00FE8FD5 /* logosc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logosc.png; path = ../assets/img/logosc.png; sourceTree = "<group>"; };
 		CADBDC3FAA1E4AEDB7F27883 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraLight.ttf"; path = "../assets/fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
-		CF1FD52E50C34BC0BAC91989 /* libPods-camtur-camturTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-camtur-camturTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D671D821CD7191CEC1DD3695 /* libPods-camtur.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-camtur.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1D0B7B70B44004CCA433611 /* libPods-camtur.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-camtur.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A3E6FF5BC9BA4AC261F6CF /* Pods-camtur-camturTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camtur-camturTests.release.xcconfig"; path = "Target Support Files/Pods-camtur-camturTests/Pods-camtur-camturTests.release.xcconfig"; sourceTree = "<group>"; };
 		E3CA48D4AB8E41769AFCD1E0 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-SemiBoldItalic.ttf"; path = "../assets/fonts/Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		E7F66CCC19AF4A2DAC2DEB8E /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-ExtraBold.ttf"; path = "../assets/fonts/Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
-		E8029287B686CE20D55133B0 /* Pods-camtur.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camtur.release.xcconfig"; path = "Target Support Files/Pods-camtur/Pods-camtur.release.xcconfig"; sourceTree = "<group>"; };
-		EAA7824741EE407D9D52F725 /* Lato-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Bold.ttf"; path = "../assets/fonts/Lato-Bold.ttf"; sourceTree = "<group>"; };
-		EBB78D4E444B4C0DB747DB8B /* Lato-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Regular.ttf"; path = "../assets/fonts/Lato-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		EFB2A26F4D8629E3EB8EE87C /* Pods-camtur-camturTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-camtur-camturTests.debug.xcconfig"; path = "Target Support Files/Pods-camtur-camturTests/Pods-camtur-camturTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0510A74A3564992BF8D6EEC /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		F4A9D6B307774119A8C00740 /* Poppins-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Light.ttf"; path = "../assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
 		FAD4002565CA47D6858E5EA1 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
-		FB3C625D0EFD47CBAE497A1E /* Lato-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Lato-Black.ttf"; path = "../assets/fonts/Lato-Black.ttf"; sourceTree = "<group>"; };
 		FF2E9218A8AE4048A33B9D58 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Poppins-Italic.ttf"; path = "../assets/fonts/Poppins-Italic.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FF560166B2BCDEA9D58E140 /* libPods-camtur-camturTests.a in Frameworks */,
+				F8931C406B7D7696CF53FC55 /* libPods-camtur-camturTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9F87C11EB559418DBDAD7E3 /* libPods-camtur.a in Frameworks */,
+				ED9A04EC882E21E56242BB0C /* libPods-camtur.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,8 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				D671D821CD7191CEC1DD3695 /* libPods-camtur.a */,
-				CF1FD52E50C34BC0BAC91989 /* libPods-camtur-camturTests.a */,
+				D1D0B7B70B44004CCA433611 /* libPods-camtur.a */,
+				19382FA93D5A44A9EF4174B8 /* libPods-camtur-camturTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -175,10 +167,10 @@
 		82BCBD701BA834B9A2519641 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6D6E6DDFA1AF30FF06586085 /* Pods-camtur.debug.xcconfig */,
-				E8029287B686CE20D55133B0 /* Pods-camtur.release.xcconfig */,
-				4216701DEA1C779380718BD7 /* Pods-camtur-camturTests.debug.xcconfig */,
-				32855C25994F065DDA7F53C9 /* Pods-camtur-camturTests.release.xcconfig */,
+				C53DAA91A24A2A8D3BF942FA /* Pods-camtur.debug.xcconfig */,
+				A8852454CF4A8588187F3BF6 /* Pods-camtur.release.xcconfig */,
+				EFB2A26F4D8629E3EB8EE87C /* Pods-camtur-camturTests.debug.xcconfig */,
+				D4A3E6FF5BC9BA4AC261F6CF /* Pods-camtur-camturTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -219,17 +211,8 @@
 		AA724A23CFF84968BDEC0EC8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C6EA51E627D3909C00FE8FD5 /* logosc.png */,
 				C61F987D278E8BF300AE02D7 /* cabecera.png */,
-				FB3C625D0EFD47CBAE497A1E /* Lato-Black.ttf */,
-				47C04E23E0914E0C8DE2CB6E /* Lato-BlackItalic.ttf */,
-				EAA7824741EE407D9D52F725 /* Lato-Bold.ttf */,
-				AC06C982694B48FA9C7A889F /* Lato-BoldItalic.ttf */,
-				A161A7EA6F7845DEADE09FAF /* Lato-Italic.ttf */,
-				9DE70F5F1988482986177570 /* Lato-Light.ttf */,
-				741FA3A3317B46A283610079 /* Lato-LightItalic.ttf */,
-				EBB78D4E444B4C0DB747DB8B /* Lato-Regular.ttf */,
-				1C3B2C3957FE4196A2316E88 /* Lato-Thin.ttf */,
-				6A15D3648D8B464795887B7F /* Lato-ThinItalic.ttf */,
 				59155C0B507D40009DEEA2BF /* Poppins-Black.ttf */,
 				933F71C4A8204C5AAD2BB0B4 /* Poppins-BlackItalic.ttf */,
 				67C16FA75FB44C3BAD269892 /* Poppins-Bold.ttf */,
@@ -275,12 +258,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "camturTests" */;
 			buildPhases = (
-				682710421ED3C67EE75E4584 /* [CP] Check Pods Manifest.lock */,
+				0009BD9A919C9865CB09F3FC /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				0E48C5CA8F275E02B1CE262D /* [CP] Embed Pods Frameworks */,
-				C1A835CB97B8402ED0885E15 /* [CP] Copy Pods Resources */,
+				6286C30BA5524079D132C034 /* [CP] Embed Pods Frameworks */,
+				6D1FD6A4CB6384A290170FEC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -296,14 +279,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "camtur" */;
 			buildPhases = (
-				9202E04C383C23E18DC58824 /* [CP] Check Pods Manifest.lock */,
+				327E3BA5F0A0E7530A0A4A07 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				EE4F371F3E38D630646DB54F /* [CP] Embed Pods Frameworks */,
-				55C69E302CBA235B5DB043F7 /* [CP] Copy Pods Resources */,
+				9D4F5F3F55652C948AD25D3E /* [CP] Embed Pods Frameworks */,
+				1E0B0B93B43C7D8C0C1C85AA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -377,6 +360,7 @@
 				AAB7FB5BCCAA448A9AD785C5 /* Poppins-Italic.ttf in Resources */,
 				E5E44BEA61464AF295E9E86F /* Poppins-Light.ttf in Resources */,
 				F9AA1BB8332A4B3690DD9BEC /* Poppins-LightItalic.ttf in Resources */,
+				C6EA51E727D3909D00FE8FD5 /* logosc.png in Resources */,
 				F0CD16654148460BA1E48882 /* Poppins-Medium.ttf in Resources */,
 				4C1E041B1FAA4F269CC94BBA /* Poppins-MediumItalic.ttf in Resources */,
 				165B792E4590442B8C45DEB7 /* Poppins-Regular.ttf in Resources */,
@@ -390,55 +374,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Bundle React Native code and images";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
-		};
-		0E48C5CA8F275E02B1CE262D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-camtur-camturTests/Pods-camtur-camturTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-camtur-camturTests/Pods-camtur-camturTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-camtur-camturTests/Pods-camtur-camturTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		55C69E302CBA235B5DB043F7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-camtur/Pods-camtur-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-camtur/Pods-camtur-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-camtur/Pods-camtur-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		682710421ED3C67EE75E4584 /* [CP] Check Pods Manifest.lock */ = {
+		0009BD9A919C9865CB09F3FC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -460,7 +396,38 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		9202E04C383C23E18DC58824 /* [CP] Check Pods Manifest.lock */ = {
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+		};
+		1E0B0B93B43C7D8C0C1C85AA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-camtur/Pods-camtur-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-camtur/Pods-camtur-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-camtur/Pods-camtur-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		327E3BA5F0A0E7530A0A4A07 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -482,7 +449,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C1A835CB97B8402ED0885E15 /* [CP] Copy Pods Resources */ = {
+		6286C30BA5524079D132C034 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-camtur-camturTests/Pods-camtur-camturTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-camtur-camturTests/Pods-camtur-camturTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-camtur-camturTests/Pods-camtur-camturTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D1FD6A4CB6384A290170FEC /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -499,7 +483,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-camtur-camturTests/Pods-camtur-camturTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EE4F371F3E38D630646DB54F /* [CP] Embed Pods Frameworks */ = {
+		9D4F5F3F55652C948AD25D3E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -568,7 +552,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4216701DEA1C779380718BD7 /* Pods-camtur-camturTests.debug.xcconfig */;
+			baseConfigurationReference = EFB2A26F4D8629E3EB8EE87C /* Pods-camtur-camturTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -595,7 +579,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 32855C25994F065DDA7F53C9 /* Pods-camtur-camturTests.release.xcconfig */;
+			baseConfigurationReference = D4A3E6FF5BC9BA4AC261F6CF /* Pods-camtur-camturTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -619,11 +603,11 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D6E6DDFA1AF30FF06586085 /* Pods-camtur.debug.xcconfig */;
+			baseConfigurationReference = C53DAA91A24A2A8D3BF942FA /* Pods-camtur.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = YH6658WGSM;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = camtur/Info.plist;
@@ -631,7 +615,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -647,18 +631,18 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8029287B686CE20D55133B0 /* Pods-camtur.release.xcconfig */;
+			baseConfigurationReference = A8852454CF4A8588187F3BF6 /* Pods-camtur.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = YH6658WGSM;
 				INFOPLIST_FILE = camtur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

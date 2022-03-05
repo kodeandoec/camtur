@@ -52,4 +52,23 @@ export default StyleSheet.create({
         color: colors.BLACK,
         marginLeft: 5,
     },
+    verified:{
+        fontSize: 10,
+        fontFamily: 'Poppins-Regular',
+        color: colors.WHITE,
+        marginLeft: 3
+    },
+    viewVerified:{
+        position: 'absolute',
+        bottom: -5,
+        right: 4,
+        left: 4,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: colors.GREEN,
+        borderRadius: 100,
+        paddingVertical: 5,
+        paddingHorizontal: 10,
+    },
 });

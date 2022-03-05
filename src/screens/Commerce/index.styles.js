@@ -141,4 +141,22 @@ export default StyleSheet.create({
         color: colors.WHITE,
         textAlign: 'center',
     },
+    verified:{
+        fontSize: 14,
+        fontFamily: 'Poppins-Regular',
+        color: colors.WHITE,
+        marginLeft: 3
+    },
+    viewVerified:{
+        position: 'absolute',
+        top: 10,
+        right: 5,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: colors.NEW1,
+        borderRadius: 200,
+        padding: 10,
+        zIndex: 1,
+    },
 });

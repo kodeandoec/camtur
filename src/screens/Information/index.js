@@ -228,61 +228,63 @@ const Information = ( {navigation} ) => {
                 </TouchableHighlight>
             </View>
 
-            <TouchableHighlight
-                onPress={() => navigation.navigate("News")}
-                underlayColor={colors.BG}
-                style={styles.btnMenu}
-            >
-                <>
-                    <View style={styles.bgIcon}>
-                        <Feather name="bookmark" size={22} color={colors.WHITE} />
-                    </View>
-                    <Text style={styles.txtInfos}>Noticias Turísticas</Text>
-                    <Feather name="chevron-right" size={28} color={colors.GREEN} />
-                </>
-            </TouchableHighlight>
+            <View style={styles.contenData}>
+                <TouchableHighlight
+                    onPress={() => navigation.navigate("News")}
+                    underlayColor={colors.BG}
+                    style={styles.btnMenu}
+                >
+                    <>
+                        <View style={styles.bgIcon}>
+                            <Feather name="bookmark" size={22} color={colors.WHITE} />
+                        </View>
+                        <Text style={styles.txtInfos}>Noticias Turísticas</Text>
+                        <Feather name="chevron-right" size={28} color={colors.GREEN} />
+                    </>
+                </TouchableHighlight>
 
-            <TouchableHighlight
-                onPress={() => navigation.navigate("InfoBanos")}
-                underlayColor={colors.BG}
-                style={styles.btnMenu}
-            >
-                <>
-                    <View style={styles.bgIcon}>
-                        <Feather name="info" size={22} color={colors.WHITE} />
-                    </View>
-                    <Text style={styles.txtInfos}>Información de Baños Ecuador</Text>
-                    <Feather name="chevron-right" size={28} color={colors.GREEN} />
-                </>
-            </TouchableHighlight>
+                <TouchableHighlight
+                    onPress={() => navigation.navigate("InfoBanos")}
+                    underlayColor={colors.BG}
+                    style={styles.btnMenu}
+                >
+                    <>
+                        <View style={styles.bgIcon}>
+                            <Feather name="info" size={22} color={colors.WHITE} />
+                        </View>
+                        <Text style={styles.txtInfos}>Información de Baños Ecuador</Text>
+                        <Feather name="chevron-right" size={28} color={colors.GREEN} />
+                    </>
+                </TouchableHighlight>
 
-            <TouchableHighlight
-                onPress={() => navigation.navigate("Map")}
-                underlayColor={colors.BG}
-                style={styles.btnMenu}
-            >
-                <>
-                    <View style={styles.bgIcon}>
-                        <Feather name="map" size={22} color={colors.WHITE} />
-                    </View>
-                    <Text style={styles.txtInfos}>Mapa Turístico de Baños Ecuador</Text>
-                    <Feather name="chevron-right" size={28} color={colors.GREEN} />
-                </>
-            </TouchableHighlight>
+                <TouchableHighlight
+                    onPress={() => navigation.navigate("Map")}
+                    underlayColor={colors.BG}
+                    style={styles.btnMenu}
+                >
+                    <>
+                        <View style={styles.bgIcon}>
+                            <Feather name="map" size={22} color={colors.WHITE} />
+                        </View>
+                        <Text style={styles.txtInfos}>Mapa Turístico de Baños Ecuador</Text>
+                        <Feather name="chevron-right" size={28} color={colors.GREEN} />
+                    </>
+                </TouchableHighlight>
 
-            <TouchableHighlight
-                onPress={() => Linking.openURL('tel:911')}
-                underlayColor={colors.BG}
-                style={styles.btnMenu}
-            >
-                <>
-                    <View style={styles.bgIcon}>
-                        <Feather name="phone-call" size={22} color={colors.WHITE} />
-                    </View>
-                    <Text style={styles.txtInfos}>Emergencias 911</Text>
-                    <Feather name="chevron-right" size={28} color={colors.GREEN} />
-                </>
-            </TouchableHighlight>
+                <TouchableHighlight
+                    onPress={() => Linking.openURL('tel:911')}
+                    underlayColor={colors.BG}
+                    style={styles.btnMenu}
+                >
+                    <>
+                        <View style={styles.bgIcon}>
+                            <Feather name="phone-call" size={22} color={colors.WHITE} />
+                        </View>
+                        <Text style={styles.txtInfos}>Emergencias 911</Text>
+                        <Feather name="chevron-right" size={28} color={colors.GREEN} />
+                    </>
+                </TouchableHighlight>
+            </View>
 
             <Text style={[styles.copyrigth, { marginTop: 20}]}>Un aporte de CAMTUR Baños</Text>
             <Text style={styles.copyrigth}>Copyright 2022 - Derechos Reservados</Text>

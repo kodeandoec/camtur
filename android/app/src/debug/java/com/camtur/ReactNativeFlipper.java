@@ -5,7 +5,7 @@
  * directory of this source tree.
  */
 // package com.camtur;
-package online.camtur;
+package visitbanos.travel;
 
 import android.content.Context;
 import com.facebook.flipper.android.AndroidFlipperClient;

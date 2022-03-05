@@ -22,9 +22,9 @@ export default StyleSheet.create({
         color: colors.BLACK,
     },
     image:{
-        width: 50,
-        height: 50,
-        borderRadius: 100,
+        width: 75,
+        height: 75,
+        borderRadius: 20,
     },
     viewAttraction:{
         borderBottomColor: colors.BG,
@@ -45,7 +45,7 @@ export default StyleSheet.create({
     txtName:{
         flex: 1,
         fontSize: 18,
-        lineHeight: 20,
+        lineHeight: 22,
         fontFamily: 'Poppins-Bold',
         color: colors.BLACK,
     },

@@ -12,6 +12,8 @@ import {
 
 import Feather from 'react-native-vector-icons/Feather'
 import Ionicons from 'react-native-vector-icons/Ionicons'
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
+
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 import getDirections from 'react-native-google-maps-directions'
 import Swiper from 'react-native-swiper';
@@ -93,6 +95,12 @@ const Commerce = ({ route, navigation }) => {
             >
                 <Feather name="arrow-left" size={30} color={colors.GREEN} />
             </TouchableHighlight>
+            { item.type === 'commerceFull' ? (
+                <View style={styles.viewVerified}>
+                    <MaterialIcons name="verified" size={22} color={colors.WHITE} />
+                    <Text style={styles.verified}>Verificado</Text>
+                </View>
+            ) : null}
 
             <View>
                 <Swiper 
@@ -144,13 +152,18 @@ const Commerce = ({ route, navigation }) => {
                         />
                     )}
                 </Swiper>
-                <View style={styles.callNow}>
-                    <Feather name="phone-call" size={28} color={colors.WHITE} />
-                    <View style={{ marginLeft: 10 }}>
-                        <Text style={styles.callNowUp}>Llamar</Text>
-                        <Text style={styles.callNowDown}>Ahora</Text>
-                    </View>
-                </View>
+                <TouchableHighlight 
+                    style={styles.callNow}
+                    onPress={ () => Linking.openURL(`tel:${item.mainPhone}`) }
+                >
+                    <>
+                        <Feather name="phone-call" size={28} color={colors.WHITE} />
+                        <View style={{ marginLeft: 10 }}>
+                            <Text style={styles.callNowUp}>Llamar</Text>
+                            <Text style={styles.callNowDown}>Ahora</Text>
+                        </View>
+                    </>
+                </TouchableHighlight>
             </View>
             <View style={styles.content}>
                 
@@ -277,6 +290,21 @@ const Commerce = ({ route, navigation }) => {
                                 <Feather name="instagram" size={20} color={colors.WHITE} />
                             </View>
                             <Text style={styles.txtInfo}>Instagram</Text>
+                            </>
+                        </TouchableHighlight>
+                    ) : null }
+
+                    { item.youtube ? (  
+                        <TouchableHighlight
+                            style={styles.viewInfo}
+                            onPress={() => Linking.openURL(item.youtube)}
+                            underlayColor={colors.BG}
+                        >
+                            <>
+                            <View style={styles.icon}>
+                                <Feather name="youtube" size={20} color={colors.WHITE} />
+                            </View>
+                            <Text style={styles.txtInfo}>Youtube</Text>
                             </>
                         </TouchableHighlight>
                     ) : null }

@@ -12,6 +12,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import useGetByCategory from '../../hooks/useGetByCategory';
 
 import Feather from 'react-native-vector-icons/Feather';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 import styles from './index.styles'
 import colors from '../../utils/colors';
@@ -73,12 +74,20 @@ const CategoryList = ( { navigation, route }) => {
                                         activeOpacity={0.8}
                                     >
                                         <View style={{ flexDirection: 'row', alignItems: 'center'}}>
-                                            <Image
-                                                source={{ uri: item.photo1 }}
-                                                style={styles.image}
-                                                resizeMode='cover'
-                                                resizeMethod='resize'
-                                            />
+                                            <View>
+                                                <Image
+                                                    source={{ uri: item.photo1 }}
+                                                    style={styles.image}
+                                                    resizeMode='cover'
+                                                    resizeMethod='resize'
+                                                />
+                                                { item.type === 'commerceFull' ? (
+                                                    <View style={styles.viewVerified}>
+                                                        <MaterialIcons name="verified" size={18} color={colors.WHITE} />
+                                                        <Text style={styles.verified}>Verificado</Text>
+                                                    </View>
+                                                ) : null}
+                                            </View>
                                             <View style={{ flex: 1, marginLeft: 10, marginRight: 10 }}>
                                                 <Text style={styles.txtName}>{item.name}</Text>
                                                 <View style={{ flexDirection: 'row', marginVertical: 5}}>

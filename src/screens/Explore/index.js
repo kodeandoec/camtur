@@ -68,7 +68,7 @@ const Explore = ( { navigation } ) => {
 
                 {attractions.map( atractivos => {
 
-                    const { id, name, latitude, longitude } = atractivos;
+                    const { id, name, latitude, longitude, photo1 } = atractivos;
 
                     return(
                         <Fragment key={id}>                            
@@ -87,7 +87,6 @@ const Explore = ( { navigation } ) => {
                                         resizeMode="contain"
                                     />
                                 </View>
-                                
                                 <Callout tooltip
                                     onPress={() => navigation.navigate(
                                         'AtractionInfo', { item: atractivos },
@@ -95,6 +94,11 @@ const Explore = ( { navigation } ) => {
                                 >
                                     <View >
                                         <View style={styles.bubble}>
+                                            <Image 
+                                                source={{ uri: photo1 }}
+                                                style={{ width: 150, height: 70, borderRadius: 10, marginBottom: 5 }}
+                                                resizeMode="cover"
+                                            />
                                             <Text style={styles.name}>{name}</Text>
                                             <Button 
                                                 title='Visitar Atractivo'   
@@ -112,7 +116,7 @@ const Explore = ( { navigation } ) => {
                 
                 {commerces.map( commerce => {
 
-                    const { id, name, latitude, longitude } = commerce;
+                    const { id, name, latitude, longitude, photo1, type } = commerce;
 
                     return(
                         <Fragment key={id}>                            
@@ -132,30 +136,49 @@ const Explore = ( { navigation } ) => {
                                     />
                                 </View>
                                 
-                                <Callout tooltip
-                                    onPress={() => navigation.navigate(
-                                        'Commerce', { item: commerce },
-                                    )}
-                                >
-                                    <View >
-                                        <View style={styles.bubble}>
-                                            <Text style={styles.name}>{name}</Text>
-                                            <Button 
-                                                title='Visitar Commercio'   
-                                                color="#841548"
-                                            />
+                                { type === 'commerceFull' ? (
+                                    <Callout tooltip
+                                        onPress={() => navigation.navigate(
+                                            'Commerce', { item: commerce },
+                                        )}
+                                    >
+                                        <View >
+                                            <View style={styles.bubble}>
+                                                <Image 
+                                                    source={{ uri: photo1 }}
+                                                    style={{ width: 150, height: 90, borderRadius: 10, marginBottom: 5 }}
+                                                    resizeMode="cover"
+                                                />
+                                                <Text style={styles.name}>{name}</Text>
+                                                <Button 
+                                                    title='Visitar Commercio'   
+                                                    color="#841548"
+                                                />
+                                            </View>
+                                            <View style={styles.arrowBorder}></View>
                                         </View>
-                                        <View style={styles.arrowBorder}></View>
-                                    </View>
-                                </Callout>
+                                    </Callout>
+                                ) : (
+                                    <Callout tooltip
+                                        onPress={() => console.log('hello')}
+                                    >
+                                        <View >
+                                            <View style={styles.bubble}>
+                                                <Image 
+                                                    source={{ uri: photo1 }}
+                                                    style={{ width: 150, height: 90, borderRadius: 10, marginBottom: 5 }}
+                                                    resizeMode="cover"
+                                                />
+                                                <Text style={styles.name}>{name}</Text>
+                                            </View>
+                                            <View style={styles.arrowBorder}></View>
+                                        </View>
+                                    </Callout>
+                                )}
                             </Marker>
                         </Fragment>
                     )
-
                     })}
-                
-
-            
             </MapView>
 
             <View style={[styles.legend, { top }]}>

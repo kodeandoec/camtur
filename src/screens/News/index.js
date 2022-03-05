@@ -80,7 +80,7 @@ const News = ( { navigation }) => {
                                     />
                                     <View style={{ flex: 1, marginLeft: 10 }}>
                                         <Text style={styles.txtName}>{item.title_es}</Text>
-                                        <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                                        <View style={{ flexDirection: 'row', alignItems: 'center', top: -5}}>
                                             <Feather name="calendar" size={14} color={colors.BLACK} />
                                             <Text style={styles.txtDate}>{changeDate(item.date)}</Text>
                                         </View>

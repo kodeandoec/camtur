@@ -94,7 +94,7 @@ const Home = ( { navigation }) => {
                             <Text style={styles.txtWeaterDown}>{weather.current.weather[0].description}</Text>
                         </View>
                     </View>
-                    {/* <Pressable
+                    <Pressable
                         onPress={() => console.log('englisg')}
                         style={({ pressed }) => [
                             {
@@ -110,12 +110,12 @@ const Home = ( { navigation }) => {
                             source={require('../../../assets/img/en.png')}
                             resizeMode="contain"
                         />
-                    </Pressable> */}
-                    <Image
+                    </Pressable>
+                    {/* <Image
                         style={styles.headerImage}
-                        source={require('../../../assets/img/logo-visit-banos-2.png')}
+                        source={require('../../../assets/img/logosc.png')}
                         resizeMode="contain"
-                    />
+                    /> */}
                 </View>
                 <View style={{ paddingHorizontal: '5%' }}>
                     <Text style={styles.txtWelcomeUp}>Bienvenido a</Text>
