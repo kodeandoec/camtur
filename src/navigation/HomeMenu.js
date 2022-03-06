@@ -49,7 +49,8 @@ const HomeMenu = () => {
                     headerStyle:{
                         elevation: 0,
                         shadowColor: 'transparent',
-                    }
+                    },
+                    gestureEnabled: false,
                 }}
                 initialRouteName="HomeTabMenu"
             >
@@ -64,7 +65,7 @@ const HomeMenu = () => {
                     name="HomeTabMenuEn"
                     component={HomeTabMenuEn}
                     options={{
-                        headerShown: false
+                        headerShown: false,
                     }}
                 />
                 <Stack.Screen
