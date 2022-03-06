@@ -11,17 +11,17 @@ import {
 import { ScrollView } from 'react-native-gesture-handler'
 import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
-import colors from '../../utils/colors'
+import colors from '../../../utils/colors'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-import useCategories from '../../hooks/useCategories';
-import useGetCommercesRand from '../../hooks/useGetCommercesRand';
-import useGetAttractionsRand from '../../hooks/useGetAttractionsRand';
+import useCategories from '../../../hooks/useCategories';
+import useGetCommercesRand from '../../../hooks/useGetCommercesRand';
+import useGetAttractionsRand from '../../../hooks/useGetAttractionsRand';
 
 import styles from './index.styles'
  
-const Home = ( { navigation }) => {
+const HomeEn = ( { navigation }) => {
 
     const { top } = useSafeAreaInsets();
 
@@ -60,7 +60,7 @@ const Home = ( { navigation }) => {
       })
 
     const getWeather = async () => {
-        const URL = "https://api.openweathermap.org/data/2.5/onecall?lat=-1.395919&lon=-78.427127&appid=d3bfbd56ce8bfaa649aafb86482a6891&units=metric&lang=es&exclude=daily,hourly,minutely";
+        const URL = "https://api.openweathermap.org/data/2.5/onecall?lat=-1.395919&lon=-78.427127&appid=d3bfbd56ce8bfaa649aafb86482a6891&units=metric&lang=en&exclude=daily,hourly,minutely";
         
         await fetch(URL)
             .then(res => res.json())
@@ -97,12 +97,12 @@ const Home = ( { navigation }) => {
                     <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                         <Image
                             style={styles.headerImage}
-                            source={require('../../../assets/img/logosc.png')}
+                            source={require('../../../../assets/img/logosc.png')}
                             resizeMode="contain"
                         />
                         <Pressable
                             onPress={() => {
-                                navigation.navigate("HomeTabMenuEn", { screen: "Home" });
+                                navigation.navigate("Home", { screen: "HomeTabMenuEn" });
                             }}
                             style={({ pressed }) => [
                                 {
@@ -115,14 +115,14 @@ const Home = ( { navigation }) => {
                         >
                             <Image
                                 style={styles.language}
-                                source={require('../../../assets/img/en.png')}
+                                source={require('../../../../assets/img/es.png')}
                                 resizeMode="contain"
                             />
                         </Pressable>
                     </View>
                 </View>
                 <View style={{ paddingHorizontal: '5%' }}>
-                    <Text style={styles.txtWelcomeUp}>Bienvenido a</Text>
+                    <Text style={styles.txtWelcomeUp}>Welcome to</Text>
                     <Text style={styles.txtWelcomeDown}>Visit Baños..!</Text>
                 </View>
             </>
@@ -145,27 +145,27 @@ const Home = ( { navigation }) => {
 
                 <View style={styles.searchView}>
                     <Pressable 
-                        onPress={() => navigation.navigate('Search')}
+                        onPress={() => navigation.navigate('SearchEn')}
                         style={styles.searchIcon}
                     >
                         <Ionicons name="ios-search" size={24} color={colors.NEW1} />
                     </Pressable>
                     
                     <Pressable 
-                        onPress={() => navigation.navigate('Search')}
+                        onPress={() => navigation.navigate('SearchEn')}
                     >
-                        <Text style={styles.searchInput}>Qué estás buscando?</Text>
+                        <Text style={styles.searchInput}>What are you looking for?</Text>
                     </Pressable>
 
                     <Pressable 
-                        onPress={() => navigation.navigate('Categories')}
+                        onPress={() => navigation.navigate('CategoriesEn')}
                         style={styles.searchIcon}
                     >
                         <Ionicons name="options-sharp" size={24} color={colors.NEW1} />
                     </Pressable>
                 </View>
 
-                <Text style={styles.titleCaption}>Categorías</Text>
+                <Text style={styles.titleCaption}>Categories</Text>
 
                 <FlatList
                     data={state}
@@ -176,10 +176,10 @@ const Home = ( { navigation }) => {
                     renderItem={({ item }) => (
                         <Pressable 
                             onPress={() => navigation.navigate(
-                                'CategoryList', 
+                                'CategoryListEn', 
                                 { 
                                     id: item.id, 
-                                    name: item.category_es 
+                                    name: item.category_en 
                                 },
                             )}
                             style={({ pressed }) => [
@@ -210,14 +210,14 @@ const Home = ( { navigation }) => {
                                     resizeMethod='resize'
                                 />
                                 <View style={styles.ctnInfo}>
-                                    <Text style={styles.txtName}>{item.category_es}</Text>
+                                    <Text style={styles.txtName}>{item.category_en}</Text>
                                 </View>
                             </View>
                         </Pressable>
                     )}
                 />
 
-                <Text style={[styles.titleCaption, { marginTop: 10 }]}>Recomendados</Text>
+                <Text style={[styles.titleCaption, { marginTop: 10 }]}>Recommended</Text>
 
                 <FlatList
                     data={commerces}
@@ -228,7 +228,7 @@ const Home = ( { navigation }) => {
                     renderItem={({ item }) => (
                         <Pressable 
                             onPress={() => navigation.navigate(
-                                'Commerce', { item },
+                                'CommerceEn', { item },
                             )}
                             style={({ pressed }) => [
                                 {
@@ -256,7 +256,7 @@ const Home = ( { navigation }) => {
                     )}
                 />
 
-                <Text style={[styles.titleCaption, { marginTop: 10 }]}>Atractivos Turísticos</Text>
+                <Text style={[styles.titleCaption, { marginTop: 10 }]}>Tourist Attractions</Text>
 
                 <FlatList
                     data={attractions}
@@ -267,7 +267,7 @@ const Home = ( { navigation }) => {
                     renderItem={({ item }) => (
                         <Pressable 
                             onPress={() => navigation.navigate(
-                                'AtractionInfo', { item },
+                                'AtractionInfoEn', { item },
                             )}
                             style={({ pressed }) => [
                                 {
@@ -296,14 +296,14 @@ const Home = ( { navigation }) => {
                 <View style={[styles.rowView, styles.rowGift]}>
                     <View style={styles.viewGiftImage}>
                         <Image
-                            source={(require('../../../assets/img/gift-box.png'))}
+                            source={(require('../../../../assets/img/gift-box.png'))}
                             style={styles.imageGift}
                             resizeMode='contain'
                         />
                     </View>
                     <View style={{ flex: 1 }}>
-                        <Text style={styles.txtUpGift}>Promociones y Beneficios</Text>
-                        <Text style={styles.txtDownGift}>Busca nuestro el logo de Visit Baños, y obtendrás excelentes Promociones y Beneficios..!</Text>
+                        <Text style={styles.txtUpGift}>Promotions and Benefits</Text>
+                        <Text style={styles.txtDownGift}>Look for our Visit Baños logo, and you will get excellent Promotions and Benefits...!</Text>
                     </View>
 
                 </View>
@@ -317,19 +317,19 @@ const Home = ( { navigation }) => {
                 >
                     <>
                         <Image
-                            source={(require('../../../assets/img/senderismo.jpeg'))}
+                            source={(require('../../../../assets/img/senderismo.jpeg'))}
                             style={styles.imageTrekking}
                             resizeMode='contain'
                         />
                         <View style={styles.viewTrek}>
-                            <Text style={styles.txtTrekking}>Senderismo en Baños Ecuador</Text>
-                            <Text style={styles.txtTrekkingDown}>Descarga la App Your Fun Trip Ecuador</Text>
+                            <Text style={styles.txtTrekking}>Hiking in Baños Ecuador</Text>
+                            <Text style={styles.txtTrekkingDown}>Download the App Your Fun Trip Ecuador</Text>
                         </View>
                     </>
                 </Pressable>
 
-                <Text style={[styles.copyrigth, { marginTop: 20}]}>Un aporte de la Cámara de Turismo - CAMTUR Baños</Text>
-                <Text style={styles.copyrigth}>Copyright 2022 - Derechos Reservados</Text>
+                <Text style={[styles.copyrigth, { marginTop: 20}]}>A contribution from the Chamber of Tourism - CAMTUR Baños</Text>
+                <Text style={styles.copyrigth}>Copyright 2022 - All rights reserved</Text>
                 <Text style={styles.copyrigth}>V.2022.1.0</Text>
 
                 <View style={{ height: 150, width: '100%'}} />
@@ -340,4 +340,4 @@ const Home = ( { navigation }) => {
     )
 }
  
-export default Home;
+export default HomeEn;

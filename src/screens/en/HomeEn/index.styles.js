@@ -1,6 +1,6 @@
 import { StyleSheet, Dimensions } from 'react-native';
 
-import colors from '../../utils/colors';
+import colors from '../../../utils/colors';
 
 const { width, height } = Dimensions.get('screen');
 
@@ -101,8 +101,8 @@ export default StyleSheet.create({
         marginRight: 10,
     },
     language:{
-        width: 36,
-        height: 36,
+        width: 40,
+        height: 40,
     },
     iconWeater:{
         width: 36,

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Home from '../screens/Home';
-import Attractions from '../screens/Attractions';
-import Explore from '../screens/Explore';
-import Categories from '../screens/Categories';
-import Information from '../screens/Information';
+import HomeEn from '../screens/en/HomeEn';
+import Attractions from '../screens/en/Attractions';
+import ExploreEn from '../screens/en/ExploreEn';
+import Categories from '../screens/en/Categories';
+import Information from '../screens/en/Information';
 
 import Feather from 'react-native-vector-icons/Feather';
 
@@ -13,10 +13,10 @@ import colors from '../utils/colors';
 
 const Tab = createBottomTabNavigator();
 
-const HomeTabMenu = () => {
+const HomeTabMenuEn = () => {
   return (
     <Tab.Navigator
-        initialRouteName="Home"
+        initialRouteName="HomeEn"
         screenOptions={{
             tabBarStyle: { 
                 position: 'absolute',
@@ -34,8 +34,8 @@ const HomeTabMenu = () => {
         }}
     >
         <Tab.Screen 
-            name="Home" 
-            component={Home} 
+            name="HomeEn" 
+            component={HomeEn} 
             options={{
                 tabBarIcon: ({ color, size }) => (
                     <Feather name="home" color={color} size={size} />
@@ -50,13 +50,13 @@ const HomeTabMenu = () => {
             }}
         />
         <Tab.Screen 
-            name="Explore" 
-            component={Explore}
+            name="ExploreEn" 
+            component={ExploreEn}
             options={{
                 tabBarIcon: ({ color, size }) => (
                     <Feather name="navigation" color={color} size={size} />
                 ),
-                tabBarLabel: 'Mapa',
+                tabBarLabel: 'Map',
                 tabBarActiveTintColor: colors.GREEN,
                 tabBarLabelStyle: {
                     fontSize: 12,
@@ -66,13 +66,13 @@ const HomeTabMenu = () => {
             }} 
         />
         <Tab.Screen
-            name="Attractions" 
+            name="AttractionsEn" 
             component={Attractions}
             options={{
                 tabBarIcon: ({ color, size }) => (
                     <Feather name="aperture" color={color} size={size} />
                 ),
-                tabBarLabel: 'Atractivos',
+                tabBarLabel: 'Attractions',
                 tabBarActiveTintColor: colors.GREEN,
                 tabBarLabelStyle: {
                     fontSize: 12,
@@ -82,13 +82,13 @@ const HomeTabMenu = () => {
             }} 
         />
         <Tab.Screen 
-            name="Categories" 
+            name="CategoriesEn" 
             component={Categories} 
             options={{
                 tabBarIcon: ({ color, size }) => (
                     <Feather name="layers" color={color} size={size} />
                 ),
-                tabBarLabel: 'Categorías',
+                tabBarLabel: 'Category',
                 tabBarActiveTintColor: colors.GREEN,
                 tabBarLabelStyle: {
                     fontSize: 12,
@@ -98,7 +98,7 @@ const HomeTabMenu = () => {
             }}
         />
         <Tab.Screen 
-            name="Information" 
+            name="InformationEn" 
             component={Information} 
             options={{
                 tabBarIcon: ({ color, size }) => (
@@ -117,4 +117,4 @@ const HomeTabMenu = () => {
   );
 }
 
-export default HomeTabMenu;
+export default HomeTabMenuEn;
