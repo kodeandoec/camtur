@@ -102,6 +102,7 @@ export default StyleSheet.create({
         lineHeight: 21,
         fontFamily: 'Poppins-Regular',
         marginLeft: 10,
+        color: colors.BLACK,
     },
     timer:{
         fontSize: 19,
