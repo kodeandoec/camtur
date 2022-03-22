@@ -94,32 +94,28 @@ const Home = ( { navigation }) => {
                             <Text style={styles.txtWeaterDown}>{weather.current.weather[0].description}</Text>
                         </View>
                     </View>
-                    <View style={{ flexDirection: 'row', alignItems: 'center'}}>
+                    <Pressable
+                        onPress={() => console.log('englisg')}
+                        style={({ pressed }) => [
+                            {
+                                backgroundColor: pressed ? colors.NEW2 : colors.WHITE,
+                                opacity: pressed ? 0.9 : 1,
+                                transform: [ { scale: pressed ? 0.95 : 1, } ],
+                            },
+                            styles.languageView,
+                        ]}
+                    >
                         <Image
-                            style={styles.headerImage}
-                            source={require('../../../assets/img/logosc.png')}
+                            style={styles.language}
+                            source={require('../../../assets/img/en.png')}
                             resizeMode="contain"
                         />
-                        <Pressable
-                            onPress={() => {
-                                navigation.navigate("HomeTabMenuEn", { screen: "Home" });
-                            }}
-                            style={({ pressed }) => [
-                                {
-                                    backgroundColor: pressed ? colors.NEW2 : colors.WHITE,
-                                    opacity: pressed ? 0.9 : 1,
-                                    transform: [ { scale: pressed ? 0.95 : 1, } ],
-                                },
-                                styles.languageView,
-                            ]}
-                        >
-                            <Image
-                                style={styles.language}
-                                source={require('../../../assets/img/en.png')}
-                                resizeMode="contain"
-                            />
-                        </Pressable>
-                    </View>
+                    </Pressable>
+                    {/* <Image
+                        style={styles.headerImage}
+                        source={require('../../../assets/img/logosc.png')}
+                        resizeMode="contain"
+                    /> */}
                 </View>
                 <View style={{ paddingHorizontal: '5%' }}>
                     <Text style={styles.txtWelcomeUp}>Bienvenido a</Text>

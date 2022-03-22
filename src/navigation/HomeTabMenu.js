@@ -34,22 +34,6 @@ const HomeTabMenu = () => {
         }}
     >
         <Tab.Screen 
-            name="Home" 
-            component={Home} 
-            options={{
-                tabBarIcon: ({ color, size }) => (
-                    <Feather name="home" color={color} size={size} />
-                ),
-                tabBarLabel: 'Home',
-                tabBarActiveTintColor: colors.GREEN,
-                tabBarLabelStyle: {
-                    fontSize: 12,
-                    fontFamily: 'Poppins-Regular',
-                },
-                headerShown: false,
-            }}
-        />
-        <Tab.Screen 
             name="Explore" 
             component={Explore}
             options={{
@@ -80,6 +64,22 @@ const HomeTabMenu = () => {
                 },
                 headerShown: false,
             }} 
+        />
+        <Tab.Screen 
+            name="Home" 
+            component={Home} 
+            options={{
+                tabBarIcon: ({ color, size }) => (
+                    <Feather name="home" color={color} size={size} />
+                ),
+                tabBarLabel: 'Home',
+                tabBarActiveTintColor: colors.GREEN,
+                tabBarLabelStyle: {
+                    fontSize: 12,
+                    fontFamily: 'Poppins-Regular',
+                },
+                headerShown: false,
+            }}
         />
         <Tab.Screen 
             name="Categories" 

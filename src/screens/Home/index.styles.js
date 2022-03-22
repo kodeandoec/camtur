@@ -98,7 +98,6 @@ export default StyleSheet.create({
     headerImage:{
         width: 146,
         height: 40,
-        marginRight: 10,
     },
     language:{
         width: 36,

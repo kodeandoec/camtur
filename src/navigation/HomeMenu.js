@@ -2,7 +2,6 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 
 import HomeTabMenu from './HomeTabMenu';
-import HomeTabMenuEn from './HomeTabMenuEn';
 
 
 import Attractions from '../screens/Attractions';
@@ -19,21 +18,6 @@ import ViewMap from '../screens/ViewMap';
 import ViewMapp from '../screens/ViewMapp';
 import Search from '../screens/Search';
 
-
-import AttractionsEn from '../screens/en/Attractions';
-import AtractionInfoEn from '../screens/en/AtractionInfo';
-import CategoriesEn from '../screens/en/Categories';
-import CategoryListEn from '../screens/en/CategoryList';
-import CommerceEn from '../screens/en/Commerce';
-import InformationEn from '../screens/en/Information';
-import NewsEn from '../screens/en/News';
-import NewInfoEn from '../screens/en/NewInfo';
-import InfoBanosEn from '../screens/en/InfoBanos';
-import MapEn from '../screens/en/Map';
-import ViewMapEn from '../screens/en/ViewMap';
-import ViewMappEn from '../screens/en/ViewMapp';
-import SearchEn from '../screens/en/Search';
-
 import {createStackNavigator} from '@react-navigation/stack';
 
 const HomeMenu = () => {
@@ -49,8 +33,7 @@ const HomeMenu = () => {
                     headerStyle:{
                         elevation: 0,
                         shadowColor: 'transparent',
-                    },
-                    gestureEnabled: false,
+                    }
                 }}
                 initialRouteName="HomeTabMenu"
             >
@@ -59,13 +42,6 @@ const HomeMenu = () => {
                     component={HomeTabMenu}
                     options={{
                         headerShown: false
-                    }}
-                />
-                <Stack.Screen
-                    name="HomeTabMenuEn"
-                    component={HomeTabMenuEn}
-                    options={{
-                        headerShown: false,
                     }}
                 />
                 <Stack.Screen
@@ -161,106 +137,6 @@ const HomeMenu = () => {
                 <Stack.Screen
                     name="Search"
                     component={Search}
-                    options={{
-                    headerShown: false,
-                    tabBarStyle:{ display: 'none' }
-                    }}
-                />
-
-
-                <Stack.Screen
-                    name="AttractionsEn"
-                    component={AttractionsEn}
-                    options={{
-                    headerShown: false
-                    }}
-                />
-                <Stack.Screen
-                    name="AtractionInfoEn"
-                    component={AtractionInfoEn}
-                    options={{
-                    headerShown: false,
-                    tabBarStyle:{ display: 'none' }
-                    }}
-                />
-                <Stack.Screen
-                    name="CategoriesEn"
-                    component={CategoriesEn}
-                    options={{
-                    headerShown: false
-                    }}
-                />
-                <Stack.Screen
-                    name="CategoryListEn"
-                    component={CategoryListEn}
-                    options={{
-                    headerShown: false
-                    }}
-                />
-                <Stack.Screen
-                    name="CommerceEn"
-                    component={CommerceEn}
-                    options={{
-                    headerShown: false
-                    }}
-                />
-                <Stack.Screen
-                    name="InformationEn"
-                    component={InformationEn}
-                    options={{
-                    headerShown: false
-                    }}
-                />
-                <Stack.Screen
-                    name="NewsEn"
-                    component={NewsEn}
-                    options={{
-                        headerShown: false
-                    }}
-                />
-                <Stack.Screen
-                    name="NewInfoEn"
-                    component={NewInfoEn}
-                    options={{
-                    headerShown: false,
-                    tabBarStyle:{ display: 'none' }
-                    }}
-                />
-                <Stack.Screen
-                    name="InfoBanosEn"
-                    component={InfoBanosEn}
-                    options={{
-                    headerShown: false,
-                    tabBarStyle:{ display: 'none' }
-                    }}
-                />
-                <Stack.Screen
-                    name="MapEn"
-                    component={MapEn}
-                    options={{
-                    headerShown: false,
-                    tabBarStyle:{ display: 'none' }
-                    }}
-                />
-                <Stack.Screen
-                    name="ViewMapEn"
-                    component={ViewMapEn}
-                    options={{
-                    headerShown: false,
-                    tabBarStyle:{ display: 'none' }
-                    }}
-                />
-                <Stack.Screen
-                    name="ViewMappEn"
-                    component={ViewMappEn}
-                    options={{
-                    headerShown: false,
-                    tabBarStyle:{ display: 'none' }
-                    }}
-                />
-                <Stack.Screen
-                    name="SearchEn"
-                    component={SearchEn}
                     options={{
                     headerShown: false,
                     tabBarStyle:{ display: 'none' }
