@@ -60,15 +60,10 @@ export default StyleSheet.create({
     },
     viewVerified:{
         position: 'absolute',
-        bottom: -5,
-        right: 4,
-        left: 4,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
+        top: -4,
+        left: -2,
         backgroundColor: colors.GREEN,
         borderRadius: 100,
-        paddingVertical: 5,
-        paddingHorizontal: 10,
+        padding: 5,
     },
 });

@@ -87,8 +87,7 @@ const Information = ( {navigation} ) => {
                 <Text style={styles.welcomeUp}>Cámara de turismo de</Text>
                 <Text style={styles.welcomeDown}>Baños Ecuador</Text>
 
-                <Text style={styles.timer}>Información de Contacto:</Text>
-                <View style={styles.lineBottom} />
+                <Text style={styles.timer}>Contacto:</Text>
 
                 <View style={styles.viewInfo}>
                     <View style={styles.icon}>
@@ -191,7 +190,6 @@ const Information = ( {navigation} ) => {
 
             <View style={styles.contenData}>
                 <Text style={styles.timer}>Mapa de Ubicación:</Text>
-                <View style={styles.lineBottom} />
                 <MapView
                     provider={Platform.OS === 'ios' ? null : PROVIDER_GOOGLE}
                     style={styles.map}

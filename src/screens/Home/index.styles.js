@@ -98,6 +98,7 @@ export default StyleSheet.create({
     headerImage:{
         width: 146,
         height: 40,
+        marginRight: 10,
     },
     language:{
         width: 36,
@@ -207,7 +208,6 @@ export default StyleSheet.create({
     },
     viewCommerce:{
         width: width / 1.6,
-        height: height / 3,
         borderRadius: 20,
         shadowColor: "#000",
         shadowOffset: {
@@ -224,29 +224,23 @@ export default StyleSheet.create({
     imageCommerce:{
         width: width / 1.6,
         height: height / 3,
-        borderRadius: 20,
+        borderTopLeftRadius: 20,
+        borderTopRightRadius: 20,
     },
     ctnInfoCommerce:{
         flex: 1,
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        backgroundColor: 'rgba(0,0,0,0.5)',
-        borderBottomLeftRadius: 20,
-        borderBottomRightRadius: 20,
         padding: 20,
         zIndex: 1,
     },
     txtNameCommerce:{
         fontSize: 18,
         fontFamily: 'Poppins-SemiBold',
-        color: colors.WHITE,
+        color: colors.BLACK,
     },
     txtAddresCommerce:{
         fontSize: 14,
         fontFamily: 'Poppins-Regular',
-        color: colors.WHITE,
+        color: colors.BLACK,
     },
     copyrigth:{
         color: colors.GRAY,
@@ -261,12 +255,12 @@ export default StyleSheet.create({
     txtUpGift:{
         fontSize: 16,
         fontFamily: 'Poppins-SemiBold',
-        color: colors.WHITE,
+        color: colors.BLACK,
     },
     txtDownGift:{
         fontSize: 14,
         fontFamily: 'Poppins-Regular',
-        color: colors.WHITE,
+        color: colors.BLACK,
     },
     viewGiftImage:{
         padding: 10,
@@ -276,7 +270,7 @@ export default StyleSheet.create({
     },
     rowGift:{
         marginHorizontal: '5%',
-        backgroundColor: colors.NEW5,
+        backgroundColor: colors.WHITE,
         borderRadius: 15,
         padding: 10,
         marginVertical: 10,
@@ -297,22 +291,17 @@ export default StyleSheet.create({
         borderRadius: 30,
     },
     viewTrek:{
-        position: 'absolute',
-        padding: 10,
-        zIndex: 1,
-        bottom: 20,
-        left: 10,
-        right: 10,
+        marginTop: 10,
         marginHorizontal: '5%',
     },
     txtTrekking:{
         fontSize: 16,
         fontFamily: 'Poppins-Regular',
-        color: colors.WHITE,
+        color: colors.BLACK,
     },
     txtTrekkingDown:{
         fontSize: 18,
         fontFamily: 'Poppins-SemiBold',
-        color: colors.WHITE,
+        color: colors.BLACK,
     }
 });

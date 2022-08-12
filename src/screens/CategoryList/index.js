@@ -84,7 +84,6 @@ const CategoryList = ( { navigation, route }) => {
                                                 { item.type === 'commerceFull' ? (
                                                     <View style={styles.viewVerified}>
                                                         <MaterialIcons name="verified" size={18} color={colors.WHITE} />
-                                                        <Text style={styles.verified}>Verificado</Text>
                                                     </View>
                                                 ) : null}
                                             </View>

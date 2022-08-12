@@ -94,28 +94,32 @@ const Home = ( { navigation }) => {
                             <Text style={styles.txtWeaterDown}>{weather.current.weather[0].description}</Text>
                         </View>
                     </View>
-                    <Pressable
-                        onPress={() => console.log('englisg')}
-                        style={({ pressed }) => [
-                            {
-                                backgroundColor: pressed ? colors.NEW2 : colors.WHITE,
-                                opacity: pressed ? 0.9 : 1,
-                                transform: [ { scale: pressed ? 0.95 : 1, } ],
-                            },
-                            styles.languageView,
-                        ]}
-                    >
+                    <View style={{ flexDirection: 'row', alignItems: 'center'}}>
                         <Image
-                            style={styles.language}
-                            source={require('../../../assets/img/en.png')}
+                            style={styles.headerImage}
+                            source={require('../../../assets/img/logosc.png')}
                             resizeMode="contain"
                         />
-                    </Pressable>
-                    {/* <Image
-                        style={styles.headerImage}
-                        source={require('../../../assets/img/logosc.png')}
-                        resizeMode="contain"
-                    /> */}
+                        <Pressable
+                            onPress={() => {
+                                navigation.navigate("HomeTabMenuEn", { screen: "Home" });
+                            }}
+                            style={({ pressed }) => [
+                                {
+                                    backgroundColor: pressed ? colors.NEW2 : colors.WHITE,
+                                    opacity: pressed ? 0.9 : 1,
+                                    transform: [ { scale: pressed ? 0.95 : 1, } ],
+                                },
+                                styles.languageView,
+                            ]}
+                        >
+                            <Image
+                                style={styles.language}
+                                source={require('../../../assets/img/en.png')}
+                                resizeMode="contain"
+                            />
+                        </Pressable>
+                    </View>
                 </View>
                 <View style={{ paddingHorizontal: '5%' }}>
                     <Text style={styles.txtWelcomeUp}>Bienvenido a</Text>
@@ -298,8 +302,8 @@ const Home = ( { navigation }) => {
                         />
                     </View>
                     <View style={{ flex: 1 }}>
-                        <Text style={styles.txtUpGift}>Promociones y Beneficios</Text>
-                        <Text style={styles.txtDownGift}>Busca nuestro el logo de Visit Baños, y obtendrás excelentes Promociones y Beneficios..!</Text>
+                        <Text style={styles.txtUpGift}>Promociones y Beneficios: 
+                        <Text style={styles.txtDownGift}> busca el logo de Visit Baños en locales participantes.</Text></Text>
                     </View>
 
                 </View>
@@ -324,9 +328,9 @@ const Home = ( { navigation }) => {
                     </>
                 </Pressable>
 
-                <Text style={[styles.copyrigth, { marginTop: 20}]}>Un aporte de la Cámara de Turismo - CAMTUR Baños</Text>
+                {/* <Text style={[styles.copyrigth, { marginTop: 20}]}>Un aporte de la Cámara de Turismo - CAMTUR Baños</Text>
                 <Text style={styles.copyrigth}>Copyright 2022 - Derechos Reservados</Text>
-                <Text style={styles.copyrigth}>V.2022.1.0</Text>
+                <Text style={styles.copyrigth}>V.2022.1.0</Text> */}
 
                 <View style={{ height: 150, width: '100%'}} />
 

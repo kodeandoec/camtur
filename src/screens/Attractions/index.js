@@ -19,6 +19,11 @@ const Attractions = ( { navigation }) => {
 
     const { state, loading } = useAtractions();
 
+    const onlyText = ( text ) => {
+        const regex = /<[^>]*>/mgi
+        const text_without_tags = text.replace(regex, "")
+        return text_without_tags;
+    }
 
     return (
         <>
@@ -48,16 +53,16 @@ const Attractions = ( { navigation }) => {
                                 activeOpacity={0.8}
                             >
                                 <>
+                                    <View style={styles.ctnInfo}>
+                                        <Text style={styles.txtName}>{item.name}</Text>
+                                        {/* <Text style={styles.txtDescription} numberOfLines={2}>{onlyText(item.description_es)}</Text> */}
+                                    </View>
                                     <Image
                                         source={{ uri: item.photo1 }}
                                         style={styles.image}
                                         resizeMode='cover'
                                         resizeMethod='resize'
                                     />
-                                    <View style={styles.ctnInfo}>
-                                        <Text style={styles.txtName}>{item.name}</Text>
-                                        {/* <Text style={styles.txtDescription} numberOfLines={3}>{item.description_es}</Text> */}
-                                    </View>
                                 </>
                             </TouchableHighlight>
                         )}

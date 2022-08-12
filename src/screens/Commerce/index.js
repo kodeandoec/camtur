@@ -95,12 +95,6 @@ const Commerce = ({ route, navigation }) => {
             >
                 <Feather name="arrow-left" size={30} color={colors.GREEN} />
             </TouchableHighlight>
-            { item.type === 'commerceFull' ? (
-                <View style={styles.viewVerified}>
-                    <MaterialIcons name="verified" size={22} color={colors.WHITE} />
-                    <Text style={styles.verified}>Verificado</Text>
-                </View>
-            ) : null}
 
             <View>
                 <Swiper 
@@ -152,20 +146,27 @@ const Commerce = ({ route, navigation }) => {
                         />
                     )}
                 </Swiper>
-                <TouchableHighlight 
-                    style={styles.callNow}
-                    onPress={ () => Linking.openURL(`tel:${item.mainPhone}`) }
-                >
-                    <>
-                        <Feather name="phone-call" size={28} color={colors.WHITE} />
-                        <View style={{ marginLeft: 10 }}>
-                            <Text style={styles.callNowUp}>Llamar</Text>
-                            <Text style={styles.callNowDown}>Ahora</Text>
-                        </View>
-                    </>
-                </TouchableHighlight>
+                
             </View>
+
             <View style={styles.content}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between'}}>
+                    { item.type === 'commerceFull' ? (
+                        <View style={styles.viewVerified}>
+                            <MaterialIcons name="verified" size={22} color={colors.WHITE} />
+                            <Text style={styles.verified}>Verificado</Text>
+                        </View>
+                    ) : null}
+                    <TouchableHighlight 
+                        style={styles.callNow}
+                        onPress={ () => Linking.openURL(`tel:${item.mainPhone}`) }
+                    >
+                        <>
+                            <Feather name="phone-call" size={28} color={colors.WHITE} />
+                        </>
+                    </TouchableHighlight>
+                </View>
+                
                 
                 <View style={[ styles.contenData, { marginTop: 20 } ]}>
                     <Text style={styles.name}>{item.name}</Text>
@@ -180,7 +181,7 @@ const Commerce = ({ route, navigation }) => {
 
                 <View style={[styles.contenData]}>
                     <Text style={styles.timer}>Precios:</Text>
-                    <View style={styles.lineBottom} />
+                    
 
                     <RenderHtml
                         contentWidth={width}
@@ -191,8 +192,8 @@ const Commerce = ({ route, navigation }) => {
                 </View>
 
                 <View style={styles.contenData}>
-                    <Text style={styles.timer}>Horario de atención:</Text>
-                    <View style={styles.lineBottom} />
+                    <Text style={styles.timer}>Horario:</Text>
+                    
 
                     <RenderHtml
                         contentWidth={width}
@@ -203,8 +204,8 @@ const Commerce = ({ route, navigation }) => {
                 </View>
 
                 <View style={[styles.contenData]}>
-                    <Text style={styles.timer}>Datos de Contacto:</Text>
-                    <View style={styles.lineBottom} />
+                    <Text style={styles.timer}>Contacto:</Text>
+                    
 
                     <TouchableHighlight
                         style={styles.viewInfo}
